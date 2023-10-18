@@ -1,0 +1,14 @@
+/*External CSS*/
+h2{
+    border: 2px SOLID black;
+    background-color: aliceblue;
+}
+#p1{
+    background-color: blue;
+}
+.h2-1{
+    border: 3PX;background-color: yellow;
+}
+P{
+    border: 2px dotted yellow;
+    background-color: green;    }
