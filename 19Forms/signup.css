@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    background-color: yellowgreen;
+    color: antiquewhite;
+    border: 1px solid yellowgreen;
+}
+h2{
+    text-align: center;
+}
