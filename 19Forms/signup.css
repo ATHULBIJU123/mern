@@ -8,6 +8,8 @@ h1{
     color: antiquewhite;
     border: 1px solid yellowgreen;
 }
-h2{
+.content{
     text-align: center;
+    color: yellow;
+    background-color:darkcyan;
 }

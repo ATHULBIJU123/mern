@@ -6,34 +6,69 @@
     <title>Sign Up</title>
     <link rel="stylesheet" href="signup.css">
 </head>
-
-
 <body>
     <h1>Sign Up</h1>
-<h2 class="set1">
+<div class="content">
+    <div>
     <form action="a1.js">
     <label for="text1">First Name</label>
     <input type="text" name="First Name" id="text1"    value="Enter First Name">
+    </div>
 
     <div>
     <label for="text2">Last Name</label>
     <input type="text" name="Last Name" id="text2"    value="Enter Last Name">
     </div>
-
-    <span>
-    <label for="dob">Date Of Birth</label>
-    <input type="date" name="dob" id="dob">
-    </span>
-    
+    <!--date of birth-->
     <div>
-    <label for="radioid">Male</label>
-    <input type="radio" name="my radio" id="radioid" value="">
+    <label for="date">Date Of Birth</label>
+    <select name="date" id="date"><option>date</option></select>
+    <select name="month" id="month"><option>Month</option></select>
+    <select name="year" id="year"><option>Year</option></select>
+    </div>    
+    <!--gender-->
+    <div>
+    <label for="gender">Gender:</label>
 
-    <label for="radioid2">Female</label>
-    <input type="radio" name="my radio" id="radioid" value="">
+    <input type="radio"name="male" id="male">
+    <label for="male">Male</label>
+    <input type="radio" name="female" id="female">
+    <label for="female">Female</label>
     </div>
 
-    </h2>
+    <div>
+        <label for="country">Country</label>
+        <select name="Country" id="country"><option>Country</option></select>
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" value="enter the email">
+    </div>
+<div>
+    <label for="phone">Phone</label>
+    <input type="text" name="phone" id="phone" value="Enter the phone number">
+</div>
+
+<div>
+    <label for="password">Password</label>
+    <input type="text" name="" id="password">
+</div>
+<div>
+    <label for="confirm">Confirm Password</label>
+    <input type="text" name="" id="confirm">
+</div>
+<div>
+    <label for="agree"></label>
+    <input type="checkbox" name="" id="agree">
+    <label for="agree">I agree to the terms of use</label>
+</div>
+<div class="last">
+    <button type="submit" style="background-color: green;">Submit</button>
+    <button type="submit" style="background-color: red;">Cancel</button>
+</div>
+
+</div>
+
     </form>
 </body>
 </html>
