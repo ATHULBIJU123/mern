@@ -23,40 +23,65 @@
     <!--date of birth-->
     <div>
     <label for="date">Date Of Birth</label>
-    <select name="date" id="date"><option>date</option></select>
-    <select name="month" id="month"><option>Month</option></select>
-    <select name="year" id="year"><option>Year</option></select>
+    <select name="date" id="date">
+        <option>date</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    </select>
+    <select name="month" id="month">
+        <option>Month</option>
+        <option value="January">January</option>
+        <option value="February">February</option>
+    </select>
+    <select name="year" id="year">
+        <option>Year</option>
+    <option value="2000">2000</option>
+    <option value="2001">2001</option>
+    <option value="2002">2002</option>
+    <option value="2003">2003</option>
+    </select>
+
     </div>    
     <br>
     <!--gender-->
     <div>
     <label for="gender">Gender:</label>
 
-    <input type="radio"name="male" id="male">
+    <input type="radio"name="gender" id="male">
     <label for="male">Male</label>
 
-    <input type="radio" name="female" id="female">
+    <input type="radio" name="gender" id="female">
     <label for="female">Female</label>
     </div>
 <br>
 
     <div>
         <label for="country">Country</label>
-        <select name="Country" id="country"><option>Country</option></select>
+        <select name="Country" id="country">
+            <option>Country</option>
+            <option value="India">India</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Nepal">Nepal</option>
+            <option value="Srilanka">Srilanka</option>
+            <option value="Pakisthan">Pakisthan</option>
+            <option value="China">China</option>
+        </select>
     </div>
     <br>
 
     <div>
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" value="enter the email">
+        <input type="email" name="email" id="email" placeholder="enter the email">
     </div>
     <br>
 
 <div>
     <label for="phone">Phone</label>
-    <input type="tel" name="phone" id="phone" value="Enter the phone number">
+    <input type="tel" name="phone" id="phone" placeholder="Enter the phone number">
 </div>
-
+<br>
 <div>
     <label for="password">Password</label>
     <input type="password" name="" id="password">
@@ -66,7 +91,7 @@
 
 <div>
     <label for="confirm">Confirm Password</label>
-    <input type="text" name="" id="confirm">
+    <input type="password" name="" id="confirm">
 </div>
 <br>
 
