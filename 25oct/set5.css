@@ -3,3 +3,15 @@ margin: 0px;
 padding: 0px;
 box-sizing: border-box;
 }
+.cont{
+    height: 410px;
+    width: 600px;
+    background-image: url('/sunrise-8290940_640.jpg');
+    z-index: -1;
+    position:fixed;
+    right: 0;
+}
+.pr{
+    color: brown;
+    z-index: 0;
+}
