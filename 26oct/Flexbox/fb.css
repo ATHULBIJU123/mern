@@ -21,7 +21,7 @@
     justify-content: center;
     /* justify-content: space-around;
     justify-content: space-between;*/
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
 
     align-items: center;
     /* align-items: flex-end;
@@ -34,4 +34,17 @@
     background-color: aqua;
     margin: 3px;
     text-align: center;
+}
+box1{
+    order: 1;
+    flex-grow: 3;
+}
+.Box2{
+    order: 3;
+    flex-basis: 50px;
+    /* flex: flex grow-grow flex-shrink flex-basis; shorthand */
+    flex: 3 3 50;
+    align-self: flex-end;
+    align-self: center;
+    align-self: flex-start;
 }

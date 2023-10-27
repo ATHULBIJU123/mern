@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.navigation{
+    background-color: rgb(51, 43, 43);
+    color: white;
+    text-transform: uppercase;
+}
+.p1{
+    margin-left: 5%;
+}
