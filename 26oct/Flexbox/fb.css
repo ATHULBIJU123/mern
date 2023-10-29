@@ -26,8 +26,8 @@
     align-items: center;
     /* align-items: flex-end;
     align-items: flex-start;
-    align-items: stretch;
-} */
+    align-items: stretch;*/
+} 
 .box{
     width: 200px;
     height: 200px;
@@ -35,16 +35,19 @@
     margin: 3px;
     text-align: center;
 }
-box1{
-    order: 1;
-    flex-grow: 3;
+
+
+.box1 {
+    order: 0;
+    /* flex-grow: 2; */
 }
+
 .Box2{
     order: 3;
-    flex-basis: 50px;
+    /* flex-basis: 50px; */
     /* flex: flex grow-grow flex-shrink flex-basis; shorthand */
-    flex: 3 3 50;
+    /* flex: 3 3 50; */
     align-self: flex-end;
     align-self: center;
-    align-self: flex-start;
+    /* align-self: flex-start; */
 }

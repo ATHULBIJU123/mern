@@ -3,12 +3,154 @@
     padding: 0px;
     box-sizing: border-box;
 }
-.navigation{
-    background-color: rgb(51, 43, 43);
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
     color: white;
-    text-transform: uppercase;
-    height: 50px;
+    padding:10px;
 }
-.p1{
-    margin-left: 5%;
+
+.left-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-nav select{
+    border: 0px;
+    background: none;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+
+.left-nav img,select{
+    margin: 0 20px 0 8px;
+}
+
+.right-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Cabin;
+    font-size: 12px;
+}
+
+.right-nav .stores,.contact,.login,.heart,.bag {
+padding: 0 5px 0 5px;
+border-right: 2px solid white;
+}
+
+.stores{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* navigation bar 2 */
+
+.sticky{
+    position: sticky;
+    top: 10px;
+    display: flex;
+}
+
+.undertab{
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.nav-under{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left{
+    margin-left: 140px;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.nav-middle{
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.list-a{
+    display: flex;
+    color: rgb(60, 90, 89);
+    text-decoration: none;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.b{
+    text-decoration: none;
+    margin: 0px 10px 0px 10px;
+    padding: 20px 0px 15px;
+}
+
+.nav-right{
+    display: flex;
+    justify-content:space-evenly;
+    margin-left: 20px;
+    margin-right: 60px;
+}
+
+.delivery{
+    display: inline;
+    border: 1px solid orange;
+    background-color: orange;
+}
+
+.deli{
+    color: #0E3051;
+}
+
+.near{
+    color: #C59A37;
+}
+
+/* divisions with flex */
+
+.cont{
+    padding: 30px 20px 10px 20px;
+    margin: 50px 20px 10px 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.head{
+    color: #0E3051;
+    /* font-family: myfont; */
+    font-size: 18px;
+    
+}
+
+.cont1,.cont2,.cont3,.cont4,.cont5,.cont6{
+    justify-content: space-around;
+}
+
+.dwnld{
+    background-color: #F9E79F;
 }
