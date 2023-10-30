@@ -144,6 +144,7 @@ border-right: 2px solid white;
     color: #0E3051;
     /* font-family: myfont; */
     font-size: 18px;
+    text-align: center;
     
 }
 
@@ -153,4 +154,42 @@ border-right: 2px solid white;
 
 .dwnld{
     background-color: #F9E79F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.code{
+    display: flex;
+}
+/* divider */
+.divider{
+    justify-content: center;
+    align-items: center;
+    padding:50px 50px 0px 50px;
+    margin:0px 100px 0px 100px;
+}
+
+.text{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.elevate{
+    padding-top: 20px;
+}
+
+.sty{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.one{
+    margin-right: 60px;
+}
+
+.two{
+    margin-right: 60px;
 }
