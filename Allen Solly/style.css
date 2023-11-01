@@ -9,7 +9,7 @@ nav{
     justify-content: space-between;
     background-color: black;
     color: white;
-    padding:10px;
+    /* padding:10px; */
 }
 
 .left-nav{
@@ -108,15 +108,20 @@ border-right: 2px solid white;
     padding: 20px 0px 15px;
 }
 
-/* .nav-right{
+.nav-right{
     display: flex;
     margin-left: 20px;
-    margin-right: 60px; */
+    margin-right: 60px;
+   align-items: center;
+}    
 
 .search{
     display: flex;
     margin-left: 120px;
     border-bottom: 1px solid black;
+}
+.search input{
+    border: 0;
 }
 
 .delivery{
@@ -207,6 +212,10 @@ border-right: 2px solid white;
     font-size: 15px;
     margin-top: 25px;
 }
+.pictures{
+    justify-content:space-around;
+    align-items: center;
+}
 
 .one{
     margin-right: 60px;
@@ -254,7 +263,7 @@ border-right: 2px solid white;
     margin-right: 100px;
 }
 .fonts{
-    color: white;
+    /* color: white; */
 }
 .f{
     display: flex;
@@ -272,8 +281,10 @@ footer{
     background-color: #0e3051;
     padding-top: 50px;
     padding-bottom: 50px;
+    justify-content: center;
+    align-items: center;
 }
-.deals-1{
+.deals1{
     margin-top: 10px;
     margin-left: 50px;
 }
@@ -281,9 +292,10 @@ footer{
 .head{
     margin-top: 50px;
     margin-left: 80px;
-    display: flex;
+    /* display: flex; */
     color: yellow;
-    font-size: 35px;   
+    font-size: 35px; 
+    text-align: center;  
 }
 .textdeal{
     border: 1px solid black;
@@ -329,6 +341,7 @@ footer{
 .hept{
     display:flex;
     margin-left: 50px;
+    justify-content: center;
 }
 .oct{
     margin-left: 20px;
@@ -397,6 +410,7 @@ footer{
 }
 .imglookbook{
     padding: 20px 0px 20px 150px;
+    justify-content: center;
 }
 
 .centre1{
