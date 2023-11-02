@@ -4,21 +4,22 @@
     box-sizing: border-box;
 }
 
+nav{
+    background-color: black;
+}
 nav ul{
     display: flex;
-    flex-direction: row;
-    background-color: black;
+    align-items: center;
+    justify-content: space-around;
     color: white;
+    font-size: 12px;
     list-style: none;
-    justify-content: center;
-    padding-top: 20px;
     position:sticky;
     top: 0px;
     z-index: 999;
+    padding:10px 400px 10px 400px;
 }
-.items{
-    /* margin: 0 250px 0px 25px; */
-    justify-content: space-evenly;
-    padding-left: 100px;
-    padding-right: 100px;
+.pro img{
+    padding-right: 1100px;
+    max-zoom: 200%;
 }
