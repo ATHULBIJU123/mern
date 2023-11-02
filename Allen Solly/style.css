@@ -110,9 +110,10 @@ border-right: 2px solid white;
 
 .nav-right{
     display: flex;
-    margin-left: 20px;
-    margin-right: 60px;
-   align-items: center;
+    margin-left: -120px;
+    margin-right: 25px;
+    align-items: center;
+    width: 606px;
 }    
 
 .search{
@@ -132,11 +133,12 @@ border-right: 2px solid white;
     margin-left: 30px;
     margin-right: 80px;
     border-radius: 90px;
-    width: 400px;
+    width: 200px;
 }
 
 .deli{
     color: #0E3051;
+    font-size: 12px;
 }
 
 .near{
@@ -260,7 +262,7 @@ border-right: 2px solid white;
 .c1,.c2,.c3{
     padding: 10px;
     padding-right: 10px;
-    margin-right: 100px;
+    margin-right: 77px;
 }
 .fonts{
     /* color: white; */
@@ -289,7 +291,7 @@ footer{
     margin-left: 50px;
 }
 
-.head{
+.header{
     margin-top: 50px;
     margin-left: 80px;
     /* display: flex; */

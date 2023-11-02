@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+    list-style: none;
+    justify-content: center;
+    padding-top: 20px;
+    position:sticky;
+    top: 0px;
+    z-index: 999;
+}
+.items{
+    /* margin: 0 250px 0px 25px; */
+    justify-content: space-evenly;
+    padding-left: 100px;
+    padding-right: 100px;
+}
