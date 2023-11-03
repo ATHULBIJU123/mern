@@ -46,3 +46,16 @@ nav ul{
 .p1{
     font-size: 28px;
 }
+.p2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    /* color: rgb(255, 255, 255); */
+    text-decoration: none;
+}
+.p2-1{
+margin-left: 35px;
+}
+.i16{
+    display: flex;
+    
+}
