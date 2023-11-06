@@ -10,7 +10,7 @@ form{
     width: 50vw;
     margin: auto;
     padding: 1rem;
-    border: 2px solid red;
+    border: 2px dashed red;
 }
 
 form input{
@@ -26,7 +26,10 @@ input[type='text'] {
 
 input[type='email'] {
     color: blueviolet;
-    color: 2px solid blueviolet;
+    border: 2px solid blueviolet;
+}
+input[type='password']{
+    color: red;
 }
 
 a{
@@ -60,6 +63,9 @@ ul li{
 
 li:nth-child(odd) {
     color: blue;
+}
+li:nth-child(1 ){
+    color: yellow;
 }
 
 li:nth-child(even){

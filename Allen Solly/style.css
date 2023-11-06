@@ -254,6 +254,7 @@ select {
     margin: 10px;
     margin-left: 145px;
     position: relative;
+    z-index: -1;
 }
 
 .tshirt,
@@ -511,6 +512,8 @@ footer {
     padding: 20px 0px 20px 150px;
     justify-content: center;
     position: relative;
+    z-index: -1;
+    
 }
 
 .imglookbook img {
