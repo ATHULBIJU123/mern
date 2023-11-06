@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: auto;
+    padding: 1rem;
+    border: 2px solid red;
+}
+
+form input{
+    margin: 1rem;
+    font-size: 25px;
+    border-radius: 8px;
+}
+
+input[type='text'] {
+    color: blue;
+    border: 2px solid blue;
+}
+
+input[type='email'] {
+    color: blueviolet;
+    color: 2px solid blueviolet;
+}
+
+a{
+    display: block;
+    text-align: center;
+    margin: 1rem;
+}
+
+a[href] {
+    background-color: aqua;
+}
+
+a[target='_blank'] {
+    background-color: green;
+}
+
+a[target='_self'] {
+    background-color: orange;
+}
+
+ul{
+    border: 2px solid red;
+    text-align: center;
+    padding: 1rem;
+    list-style: none;
+}
+
+ul li{
+    margin: 1rem;
+}
+
+li:nth-child(odd) {
+    color: blue;
+}
+
+li:nth-child(even){
+    color: red;
+}
+
+li:nth-child(3){
+    background-color: aquamarine;
+}
+
+/* n=0,1,2,3,.... */
+li:nth-child(2n){
+    background-color: black;
+}
+
+li:nth-child(3n+1){
+    background-color: brown;
+}
