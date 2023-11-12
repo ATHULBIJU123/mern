@@ -81,22 +81,57 @@ margin-left: 35px;
 .ipod{
     padding-top: 40px;
     position: absolute;
+    left: 200px;
+    margin-top: 20px;
     color: white;
-    text-align: center;
+    text-align:center;
+
     
 }
 .watch{
     color: white;
     position: absolute;
+    right: 230px;
     text-align: center;
+    margin-top: 30px;
+}
+.a{
+    display: flex;
+    justify-content: center;
+    margin-top: 10PX;
+}
+h4{
+    color: red;
+    margin-left: 30px;
 }
 .block1{
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
+    margin: 10px 10px 10px 10px;
+}
+.cont6{
+    margin-top: 19px;
+    margin-left: 10px;
 }
 
-.watch img{
-    position: absolute;
-    z-index: 1;
-    background-color: white;
+
+.imac{
+    text-align: center;
+   
+}
+.block2{
+    display: flex;
+}
+.ipad{
+    text-align: center;
+    
+}
+
+.inv{
+    display: flex;
+   justify-content: center;
+}
+
+.l1 ul,.l2 ul,.l3 ul,.l4 ul,.l5 ul{
+    color: black;
+    display: inline;
 }
