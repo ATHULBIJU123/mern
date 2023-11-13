@@ -9,7 +9,7 @@ nav{
     position:sticky;
     top: 0px;
 }
-ul{
+.items{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -131,7 +131,51 @@ h4{
    justify-content: center;
 }
 
+.par{
+    border-bottom: 1px solid black;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.l{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    justify-content: space-between;
+}
+
 .l1 ul,.l2 ul,.l3 ul,.l4 ul,.l5 ul{
     color: black;
     display: inline;
+    list-style: none;
+}
+
+
+.las{
+    border-bottom: 1px solid black;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 20px;
+}
+
+.last{
+    display: flex;
+    margin-top: 15px;
+}
+.pri{
+    list-style: none;
+    display: inline-flex;
+   
+}
+.pri li{
+    border-right: 1px solid black;
+    margin-right: 10px;
+}
+.z{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.y{
+    margin-left: 100px;
 }
