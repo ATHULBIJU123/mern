@@ -4,3 +4,15 @@ div{
 span{
     background-color: yellow;
 }
+
+.cont{
+    background-color: blueviolet;
+    text-align:center;
+}
+#s1 p{
+    background-color: green;
+    color: yellow;
+}
+#s2 {
+   
+}
