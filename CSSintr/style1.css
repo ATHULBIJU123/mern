@@ -14,5 +14,12 @@ span{
     color: yellow;
 }
 #s2 {
-   
+   background-color: yellowgreen;
+}
+.element{
+    display: flex;
+    justify-content:space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-top: 30px;
 }
