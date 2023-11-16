@@ -4,33 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+    <style>
+        .form{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            width: fit-content;
+        }
+    </style>
 </head>
 <body>
     <form action="action.js">
-<div>
-    <div>
-        <label for="text1">Name :</label>
-        <input type="text" name="mytext" id="text1" placeholder="This is a text">
-    </div>
-        <label for="radioid">Yes</label>
-        <input type="radio" name="my radio" id="radioid" value="yes">
+    <div class="form">
 
-        <label for="radioid2">No</label>
-        <input type="radio" name="my radio" id="radioid2" value="no">
-    <div>
-        <label for="checkboxid">Agree</label>
-        <input type="checkbox" id="checkboxid" value="true">
-    </div><br>
-    <div>
+        <h1>Inputs used in a form</h1>
+    
+        <span><label for="text1">Name :</label>
+            <input type="text" name="mytext" id="text1" placeholder="Enter your full name">
+        </span><br>
+    
+        <span><label for="email">Email :</label>
+            <input type="email" name="email" placeholder="Enter your Email">
+        </span><br>
+    
+        <span><label for="password">Password :</label>
+            <input type="password" name="pass" id="password" placeholder="Enter your password">
+        </span><br>
+    
+        <span>
+            <label for="radioid">Gender :</label> &nbsp;&nbsp;&nbsp;
+            <label for="radioid">Male</label>
+            <input type="radio" name="Gender" id="radioid" value="male">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+            <label for="radioid2">Female</label>
+            <input type="radio" name="Gender" id="radioid2" value="female">
+        </span><br>
+    
+        <span><label for="car">Car :</label>
+            <select name="Car_List" id="car">
+                <option value="Benz">Benz</option>
+                <option value="BMW">BMW</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Volvo">Volvo</option>
+            </select>
+        </span>
+        <br>
+
+        <textarea name="Message" id="message" cols="30" rows="10" placeholder="Enter Your Message For Us"></textarea>
+        <br>
+    
+        <span><label for="checkboxid"> I Agree</label>
+            <input type="checkbox" id="checkboxid" value="Agree">
+        </span><br>
+    
         <input type="submit" name="" id="" value="submit"><br>
-
-        <input type="button" value="click here">
+    
+        <input type="button" value="click here"><br>
+    
+        <button>MyButton</button><br>
+    
+        <input type="box" placeholder="description"><br>
     </div>
     </form>
-    <button>MyButton</button>
-<div>
-    <input type="box" placeholder="description">
-   
-</div>
 </body>
 </html>
