@@ -1,4 +1,10 @@
-table{
+table,tbody,th,tr,td{
     border: 2px solid black;
     border-collapse:collapse ;
 }
+.t2{
+    background-color: rgb(180, 210, 236);
+    border-collapse: separate;
+    border: 3px solid red;
+}
+/* border collapse is used to collapse and separate the border in the table; borders between th- table head, td-table data etc */
