@@ -7,4 +7,12 @@ table,tbody,th,tr,td{
     border-collapse: separate;
     border: 3px solid red;
 }
+.item{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width:fit-content;
+    text-align: center; /*text-align: includes 3 styles: center,left,right;*/
+    margin: auto;
+}
 /* border collapse is used to collapse and separate the border in the table; borders between th- table head, td-table data etc */
