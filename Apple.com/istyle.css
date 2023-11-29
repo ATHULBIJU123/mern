@@ -81,27 +81,34 @@ margin-left: 35px;
 
 .block1{
     display: flex;
-    
+    border: 10px solid yellow;
+    justify-content: space-between;
+    padding-left: 50PX;
+    padding-right: 50px;
 }
-.ipod{
+.cont5{
+    text-align: center;
+    border: 9px solid rgb(253, 37, 37);
+    color: rgb(10, 10, 10);
+}
+/* .ipod{
     padding-top: 40px;
-    /* position: absolute; */
-    /* left: 200px; */
+    position: absolute;
     text-align: center;
     margin-top: 20px;
-    color: black;
+    color: rgb(221, 218, 218);
     text-align:center;    
-}
+} */
 
 .cont6{
-    margin-top: 19px;
-    margin-left: 10px;
+  text-align: center;
+  border: 5px solid blue;
 }
 .watch{
-    color:black;
-    /* position: absolute; */
+    color:rgb(0, 0, 0);
+    position: absolute;
     right: 230px;
-    text-align: center;
+    /* text-align: center; */
     margin-top: 30px;
 }
 .a{
@@ -111,10 +118,8 @@ margin-left: 35px;
 }
 h4{
     color: red;
-    margin-left: 30px;
+    margin-left: 10px;
 }
-
-
 
 
 .imac{
