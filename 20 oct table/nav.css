@@ -20,16 +20,10 @@ a{
 }
 
 .nav-container{
-    /*border: 2px solid red;*/
     height: 60px;
 }
 
-.nav-item{
-   /* border: 2px solid black;*/
-}
-
 .list{
-   /* border: 5px solid green;*/
     display: inline;
     color: white;
     margin: 0px 100px 0px 150px;
@@ -43,9 +37,11 @@ a{
 }
 
 input{
-    margin-right: 3px;
+    margin-right: 4px;
+    margin-left: 180px;
 }
 
 button{
-    background-color: orange;
+    background-color:#f08804;
 }
+

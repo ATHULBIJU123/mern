@@ -80,22 +80,17 @@ margin-left: 35px;
 
 .block1{
     display: flex;
-    border: 10px solid yellow;
-    justify-content: space-between;
+    /* border: 10px solid yellow; */
+    justify-content: space-evenly;
 }
 .cont5{
     text-align: center;
-    border: 9px solid rgb(253, 37, 37);
-    color: rgb(10, 10, 10);
+    /* border: 9px solid rgb(253, 37, 37); */
+    color: rgb(255, 255, 255);
+    background-color: black;
+    font-size: 20px;
+    height: fit-content;
 }
-/* .ipod{
-    padding-top: 40px;
-    position: absolute;
-    text-align: center;
-    margin-top: 20px;
-    color: rgb(221, 218, 218);
-    text-align:center;    
-} */
 
 .w{
     display: flex;
@@ -103,39 +98,43 @@ margin-left: 35px;
 }
 .cont6{
   text-align: center;
-  border: 5px solid blue;
+  /* border: 5px solid blue; */
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  height: fit-content;
+}
+.cont6 h4{
+    font-size: 18px;
 }
 .watch{
     color:rgb(0, 0, 0);
     position: absolute;
     right: 230px;
-    /* text-align: center; */
     margin-top: 30px;
-}
-.a{
-    /* display: flex;
-    justify-content: center;
-    margin-top: 10PX; */
 }
 h4{
     color: red;
     margin-left: 10px;
 }
 
-
 .imac{
     text-align: center;
-
-   
+    background-color: rgb(251 251 250);
+}
+.imac h2{
+    font-size: 30px;
 }
 .block2{
     display: flex;
 }
 .ipad{
     text-align: center;
-    
+    background-color: rgb(251 251 250);
 }
-
+.ipad h2{
+    font-size: 30px;
+}
 .inv{
     display: flex;
    justify-content: center;
