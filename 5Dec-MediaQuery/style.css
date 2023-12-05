@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: lightblue;  /*background-color is lightblue unless other boundary condition is specified*/
+}
+@media  only screen and (min-width: 400px) { /*from 400px background-color is red*/
+    body{
+        background-color: red;
+    }    
+}
+@media screen and (min-width: 600px) { /*from 600px background-color is yellow*/
+    body{
+        background-color: yellow;
+    }
+}
+@media screen and (max-width: 200px) {   /*until 200px background-color is orange*/
+    body{
+        background-color: orange;
+    }
+}
+ @media screen and (min-width:800px) and (max-width:1000px) { /*background color is brown between 800px and 1000px. After 1000px background color will become yellow (previously given)*/
+    body{
+        background-color: brown;
+    }
+ }
