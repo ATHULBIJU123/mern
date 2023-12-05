@@ -26,3 +26,28 @@ body {
         background-color: brown;
     }
  }
+
+ /* .one{
+    background-color: rgb(132, 66, 66);
+ } */
+ .one{
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+ }
+ .one h1{
+    text-align: center;
+ }
+ @media screen and (min-width: 800px) {
+    .one{
+        background-color: chocolate;
+    }
+    .one h1{
+        color: white;
+    }
+ }
+ @media screen and (max-width:800px) { /*background color will be cornsilk upto max 800px of width*/
+    .two{
+        background-color: cornsilk;
+    }
+ }
