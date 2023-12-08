@@ -51,3 +51,8 @@ body {
         background-color: cornsilk;
     }
  }
+ @media screen and (min-height:900px) {
+    .three h1{
+        color: cadetblue;
+    }
+ }

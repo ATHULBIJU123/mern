@@ -9,9 +9,9 @@
     background-color: burlywood;
     margin: auto;
     display: flex;
-    /*flex-direction: column;
+    /*flex-direction: column;           controls the height dimension
     flex-direction: column-reverse;
-    flex-direction: row;
+    flex-direction: row;                controls the width dimension
     flex-wrap: nowrap;
     flex-wrap: wrap;
     flex-wrap: wrap-reverse;
@@ -21,12 +21,14 @@
     justify-content: center;
     /* justify-content: space-around;
     justify-content: space-between;*/
-    /* justify-content: space-evenly; */
+    /* justify-content: space-evenly;           used for horizontal allignment */
+    
 
     align-items: center;
     /* align-items: flex-end;
     align-items: flex-start;
-    align-items: stretch;*/
+    align-items: stretch;           used for vertical allignment*/
+    
 } 
 .box{
     width: 200px;
@@ -38,16 +40,29 @@
 
 
 .box1 {
-    order: 0;
+    order: 1;
     /* flex-grow: 2; */
 }
 
 .Box2{
-    order: 3;
+    order: 2;
     /* flex-basis: 50px; */
     /* flex: flex grow-grow flex-shrink flex-basis; shorthand */
     /* flex: 3 3 50; */
     align-self: flex-end;
     align-self: center;
     /* align-self: flex-start; */
+    /* flex-grow: 3; */
+}
+@media screen and (max-width: 800px) {
+    .box1{
+        background-color: yellow;
+    }
+}
+
+.Box3{
+    flex: 2 2 0;
+    align-self: center;
+    align-self: flex-end;
+    align-self: flex-start;
 }
