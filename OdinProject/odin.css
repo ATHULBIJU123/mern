@@ -1,41 +1,63 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-nav{
+nav div{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 8px 32px 8px 32px;
-}
-.cont{
-    display: flex;
     align-items: center;
     margin: 0 119px 0 119px;
-    column-count: 2;
-    column-gap: 350px;
 }
+
 .left{
-    border: 1px solid black; 
-    text-align: left;
+    /* border: 1px solid black;  */
+    margin-left: 150px;
 }
+.right{
+    margin-right: 180px;
+}
+
 .navr{
+    /* border: 1px solid black; */
+    list-style: none;  
     display: flex;
-    list-style: none;
-    border: 1px solid black;  
+    justify-content: space-between;
     width: max-content;
-    margin-right: 119px;
+    align-items: center;
+}
+@media screen and (max-width:767px){
+    .navr{
+        visibility: hidden;
+    }
+}
+@media screen and (min-width:767px){
+    .menu{
+        visibility: hidden;
+    }
 }
 .navr li{
     padding-left: 30px;
     font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #6b7280;
 }
 .navr li a{
     text-decoration: none;
-    color: black;
+    color: #6b7280;
+}
+.navr li button a{
+    color: white;
 }
 .navr li button{
-    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 0.375rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+.navr a:hover{
+    text-decoration: underline;
 }
