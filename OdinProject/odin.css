@@ -9,7 +9,7 @@ nav div{
     justify-content: space-between;
     padding: 8px 32px 8px 32px;
     align-items: center;
-    margin: 0 119px 0 119px;
+    /* margin: 0 119px 0 119px; */
 }
 
 .left{
@@ -60,4 +60,9 @@ nav div{
 }
 .navr a:hover{
     text-decoration: underline;
+}
+
+.header{
+    text-align: center;
+    font-size: 24px;
 }
