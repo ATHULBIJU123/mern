@@ -1,0 +1,30 @@
+:root{
+    --primary-color: blueviolet;
+    --danger-color: red;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin-top: 50px;
+    border: 2px solid YELLOW;
+    background-color: aqua;
+}
+
+/* Selects every paragraph residing within the container */
+.container p{
+    --success-color: green;
+    color: var(--success-color);   /*variable only work within the container since it is given inside of it */
+}
+
+/* Selects the paragraph right after the container */
+.container + p{
+    color: var(--primary-color);
+}
+
+.container > p{
+    color: var(--danger-color);
+}
