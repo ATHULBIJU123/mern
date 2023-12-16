@@ -11,7 +11,7 @@ h1{
 .grid-container{
     /* display: inline-grid; */
     display: grid;
-    height: 80vh;
+    height: 40vh;
     /* grid-template-rows: 80px 150px 50px; */
     /* grid-template-columns: auto auto auto; */
     /* column-gap: 80px;
@@ -47,4 +47,47 @@ h1{
 }
 #item5{
     grid-area: 1/2/5/7;
+}
+.container{
+    display: grid;
+    border: 1px solid blueviolet;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    
+}
+.grid{
+    border: 2px solid yellow;
+    padding: 20px;
+    text-align: center;
+    background-color: brown;
+}
+#one{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+#two{
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.list1{grid-area: header;}
+.list2{grid-area: menu;}
+.list3{grid-area: main;}
+.list4{grid-area: right;}
+.list5{grid-area: footer;}
+.cont{
+    display: grid;
+    background-color: #2196F3;
+    /* border: 3px solid rgb(7, 7, 218); */
+    grid-template-areas: 'header header header header header header''menu main main main right right' 'menu footer footer footer footer footer';
+    gap: 10px;
+    padding: 10px;
+}
+.cont> div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0; 
+    font-size: 30px;
+}
+#l{
+    /* border: 2px solid green; */
 }
