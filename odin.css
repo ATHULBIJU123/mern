@@ -1,0 +1,155 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+  :root {
+    font-size: 10px;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* nav div{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 32px 8px 32px;
+    align-items: center;
+    margin: 0 119px 0 119px;
+} */
+
+/* nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+nav .cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 48px 12px 48px;
+}
+
+.left{
+    /* border: 1px solid black;  */
+    margin-left: 15rem;
+}
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navr{
+    /* border: 1px solid black; */
+    list-style: none;  
+    display: flex;
+    justify-content: space-between;
+    width: max-content;
+    align-items: center;
+}
+
+.img-banner {
+    /* border : 2px solid red; */
+}
+
+/* .img-banner img {
+    width: 10px;
+} */
+
+.header {
+    text-align: justify;
+}
+
+
+@media only screen and (max-width : 1200px) {
+
+    :root {
+        font-size: 9px;
+    }
+    /* .header h1{
+        font-size: 10vw;
+    } */
+}
+
+@media screen and (max-width:767px){
+    :root {
+        font-size: 8px;
+    }
+
+    .navr{
+        display: none;
+    }
+
+    .right {
+        padding: 0 2rem 0 2rem;
+    }
+}
+
+@media screen and (min-width:767px){
+    .menu{
+        visibility: hidden;
+    }
+}
+.navr li{
+    padding-left: 3rem;
+    font-size: 1.4rem;
+    font-family: 'Inter', sans-serif;
+    color: #6b7280;
+}
+.navr li a{
+    text-decoration: none;
+    color: #6b7280;
+}
+.navr li button a{
+    color: white;
+}
+.navr li button{
+    padding: 0.8rem 1.6rem;
+    border: none;
+    border-radius: 0.6rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+}
+.navr a:hover{
+    text-decoration: underline;
+}
+
+.header{
+    text-align: center;
+    font-size: 2.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #374151;
+    margin: 0 20rem 0 20rem;
+    padding: 8.4rem 4.8rem 2.4rem 4.8rem;
+}
+.header span{
+    color:red;
+}
+.header a{
+    text-decoration: none;
+    border: 1px solid rgb(209 213 219);
+    border-radius: 0.375rem;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    padding: .75rem 1.5rem;
+}
+
+
+
+
+
+
+.three{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    text-align: center;
+}
+.item1{
+    font-size: 2.5rem;
+}
+.item2{
+    font-size: 1.5rem;
+}
