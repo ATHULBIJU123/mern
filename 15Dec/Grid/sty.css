@@ -89,5 +89,12 @@ h1{
     font-size: 30px;
 }
 #l{
-    /* border: 2px solid green; */
+    border: 5px solid red;
 }
+
+/* .gr{
+    border: 5px solid red;
+}
+.list1{
+    background-color: #2196F3;
+} */
