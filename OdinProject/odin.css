@@ -118,6 +118,7 @@ nav .cont {
 .header{
     text-align: center;
     font-size: 2.4rem;
+    font-weight: 500;
     font-family: Arial, Helvetica, sans-serif;
     color: #374151;
     margin: 0 20rem 0 20rem;
@@ -134,22 +135,54 @@ nav .cont {
     line-height: 1.5rem;
     padding: .75rem 1.5rem;
 }
-
-
-
-
-
+.head {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #6b7280;
+    text-align: center;
+    width: 50vw;
+    margin: auto;
+    margin-top: 50px;
+}
+.head h2{
+    color: black;
+}
 
 .three{
-    border: 1px solid black;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: center;
+    width: 70vw;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 270px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
     text-align: center;
+    justify-content: space-between  ;
 }
 .item1{
     font-size: 2.5rem;
+    margin-top: 16px;
+    margin-top: 32px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4b5563;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
+
 .item2{
     font-size: 1.5rem;
+    margin-top: 20px;
+    color: #4b5563;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.item2 p{
+    font-size: 16px;
+}
+.b,.c {
+    margin-left: 100px;
 }
