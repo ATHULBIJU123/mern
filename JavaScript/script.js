@@ -27,6 +27,7 @@ a=10;   //Variable Intialization
     {
         //Can be declared multiple times in a program
         //Not a Block Scope
+        //Hoisted
         var a;
         // a=12;
         a=10;
@@ -37,11 +38,30 @@ a=10;   //Variable Intialization
     console.log("d:value of d is ",d);
     
     //Block Scope
-    {
-        let b;//Intia;lization and declaration can be done in two lines
-        b=1;
-        console.log("b : ",b); //Gives output, as b is defined inside the block, const variables only can be accessed inside the block 
+    // {} - Block
+{
+    //let and const are not hoisted
+    let b;//Initialization and declaration can be done in two lines
+    b = 1;
+    console.log("b : ", b); //Gives output, as b is defined inside the block, const variables only can be accessed inside the block 
 
-        const c = 10;
-    }
-    console.log("c : ",c); //Gives error, c is not defined, const variables cannot be accessed outside the block    // a=12;
+    const c = 10;
+    console.log("c : ", c); //Gives error, c is not defined, const variables cannot be accessed outside the block    // a=12;
+}
+
+{
+    let b;
+    b = 20;
+    console.log("b : ", b); //Gives output, as b is defined inside the block.
+    const c = 1000;
+    console.log("c : ", c); //Gives output, as c is defined inside the block.
+}
+
+{
+    //Datatype
+
+    //String(Sequence of characters)
+    let name = 'John';
+    console.log("name: ",name);
+    console.log("type of name : ")
+}
