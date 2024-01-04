@@ -46,7 +46,7 @@ a=10;   //Variable Intialization
     console.log("b : ", b); //Gives output, as b is defined inside the block, const variables only can be accessed inside the block 
 
     const c = 10;
-    console.log("c : ", c); //Gives error, c is not defined, const variables cannot be accessed outside the block    // a=12;
+    console.log("c : ", c); //Gives output, c is not defined, const variables cannot be accessed outside the block    // a=12;
 }
 
 {
@@ -56,6 +56,20 @@ a=10;   //Variable Intialization
     const c = 1000;
     console.log("c : ", c); //Gives output, as c is defined inside the block.
 }
+
+//Window
+console.log("window:",window);
+window.console.log("Hello world");
+
+var fruit="apple"; //Corrupts window object
+console.log("window.fruit:",window.fruit);
+
+//Doesn't corrupt window object
+let vehicle="bike";
+console.log("window.vehicle:",window.vehicle);
+const place = "Ernakulam";
+console.log("window.place:",window.place);
+
 
 {
     //Datatype
