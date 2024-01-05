@@ -22,7 +22,7 @@ a=10;   //Variable Intialization
 3.Case Sensitive ('A' and 'a' are treated differently)
 */
 
-//Variable Scopes
+    //Variable Scopes
     //Global(function) Scope
     {
         //Can be declared multiple times in a program
@@ -72,7 +72,7 @@ console.log("window.place:",window.place);
 
 
 {
-    //Datatype
+  //Datatype
 
     //String(Sequence of characters)
     let name = 'John';
@@ -91,24 +91,153 @@ console.log("window.place:",window.place);
 
     let boolFalse = false;
     console.log('type of boolFalse : ', typeof(boolFalse));
-    
+
+    //Undefined(Represents undefined value)
+    let varUndefined = undefined;
+    console.log("varUndefined: - ", varUndefined);
+    console.log('type of varUndefined : ', typeof(varUndefined));
+
+    let x;
+    console.log("x : ",x);
+
+    //Null(Represents no value at all)
+    let varNull = null;
+    console.log("varNull: - ", varNull);
+    console.log("type of varNull :  ", typeof(varNull));
+
 }
 
-//Javascript String Methods
+
+
 {
-let str = "Hello";
-console.log("str:",str);
+//Javascript String Methods
+    let str = "Hello";
+    console.log("str:",str);
 
-let stringLength = str.length;//Finds the lenght of String
-console.log("stringLength:",stringLength);
+    let stringLength = str.length;//Finds the lenght of String
+    console.log("stringLength:",stringLength);
 
-let strToUpperCase = str.toUpperCase();//Converts all letters in strigng to uppercase
-console.log("strToUpperCase :",strToUpperCase);
+    let strToUpperCase = str.toUpperCase();//Converts all letters in strigng to uppercase
+    console.log("strToUpperCase :",strToUpperCase);
 
-let strToLowerCase = str.toLowerCase();//Check caps of words
-console.log("strToLowerCase:",strToLowerCase);
+    let strToLowerCase = str.toLowerCase();//Check caps of words
+    console.log("strToLowerCase:",strToLowerCase);
 
-let trimmedString = str.trim();//Removes spaces from left and right
-console.log("trimmedString : ", trimmedString);
-console.log("trimmedString length: ", trimmedString.length)
+    let trimmedString = str.trim();//Removes spaces from left and right
+    console.log("trimmedString : ", trimmedString);
+    console.log("trimmedString length: ", trimmedString.length);
+
+    let leftTrimmedString = str.trimLeft();//trimEnd
+    console.log("leftTrimmedString : ", leftTrimmedString);
+    console.log("leftTrimmedString length: ", leftTrimmedString.length);
+
+    let rightTrimmedString = str.trimRight();//trimEnd
+    console.log("rightTrimmedString : ", rightTrimmedString);
+    console.log("rightTrimmedString length: ", rightTrimmedString.length);
+
+    let subString = str.substring(1,3);
+    console.log("subString : ", subString);
+
+    let replacedString = str.replace("lo","iw")
+    console.log("replacedString : ", replacedString);
+
+    console.log("Is string starts with h or not?", str.startsWith('H'));
+    console.log("Is string ends with o or not?", str.endsWith('o'));
+
+    let splittedString = str.split(',');//Converts string to an array
+    console.log("splittedString ; ", splittedString);
+
+    let joinedString = splittedString.join(',');//Converts array to string
+    console.log("joinedString : ",joinedString);
+
+
+}
+
+
+{
+//Operators -----(05-1-24)
+
+    //  ++ -> add 1
+    //  -- -> subs 1
+
+    //PreIncrement  - increments and returns value.
+    let a =10;
+    let PreIncrement = ++a;
+    console.log("PreIncrement : ", PreIncrement);
+
+    //PostIncrement - increments, but doesn't returns value
+    let b=20;
+    let PostIncrement = b++;
+    console.log("PostIncrement : ", PostIncrement);
+
+    //PreDecrement  - decrements and returns value.
+    let c = 30;
+    let PreDecrement = --c;
+    console.log("PreDecrement : ", PreDecrement);
+
+    //PostDecrement - decrements, but doesn't returns value
+    let d= 40;
+    let PostDecrement = d--;
+    console.log("PostDecrement : ", PostDecrement);
+
+}
+
+
+{
+//Assignment Operators
+    let x = 100;
+    console.log("x:",x)
+
+    let y = 200;
+    console.log("y:",y)
+
+    x=y;
+    console.log("x:",x)
+
+    x+=y;//x=x+y
+    console.log("x:",x)
+
+}
+
+
+{
+//Comparison Operators
+    let a=10;
+    let b=11;
+
+    console.log("a == b : ",a==b);
+    console.log("a !=b : ",a !=b);
+    console.log("a === b : ",a===b);//Check both value and datatype, true if both type and value are same
+    console.log("a !==b : ",a!==b);//Checks both value and datatype, true if type or value is same
+    console.log("a < b : ",a<b);
+    console.log("a > b : ",a>b);
+    console.log("a <= b : ",a<=b);//true if a<b or a=b
+    console.log("a >= b :",a>=b);//true if a>b or a=b
+
+
+    //Ternary Operator
+    let age = 10;
+    age>18?console.log("Allowed"):console.log("Not Allowed");
+
+    //Logical Operator
+    let hasPassport = true;
+    let hasId = false;
+
+    console.log("Logical AND");
+    age>18 && hasPassport && hasId?console.log("Allow"):console.log("Not Allowed");
+
+    console.log("Logical OR")
+    age>18 || hasPassport || hasId?console.log("Allow"):console.log("Not Allowed");
+
+    console.log("!hasPassport : ", !hasPassport);
+
+    //Concatenation
+    let val1 = "10"
+    let val2 = "20"
+    console.log("val1+val2 : ", val1+val2);
+
+    let val3 = "Hello";
+    let val4 = "World";
+    console.log("val3 + val4:", val3 + val4)
+
 }
