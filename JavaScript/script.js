@@ -77,5 +77,38 @@ console.log("window.place:",window.place);
     //String(Sequence of characters)
     let name = 'John';
     console.log("name: ",name);
-    console.log("type of name : ")
+    console.log("type of name : ",typeof(name));
+
+    //Number (Represents Numerical Values)
+    let num=100;
+    console.log("num: ",num);
+    console.log("num : ---",typeof(num))
+
+    //Boolean values (Either true or false)
+    let boolTrue = true;
+    console.log("booltrue:",boolTrue);
+    console.log("type of booltrue :  ", typeof(boolTrue));
+
+    let boolFalse = false;
+    console.log('type of boolFalse : ', typeof(boolFalse));
+    
+}
+
+//Javascript String Methods
+{
+let str = "Hello";
+console.log("str:",str);
+
+let stringLength = str.length;//Finds the lenght of String
+console.log("stringLength:",stringLength);
+
+let strToUpperCase = str.toUpperCase();//Converts all letters in strigng to uppercase
+console.log("strToUpperCase :",strToUpperCase);
+
+let strToLowerCase = str.toLowerCase();//Check caps of words
+console.log("strToLowerCase:",strToLowerCase);
+
+let trimmedString = str.trim();//Removes spaces from left and right
+console.log("trimmedString : ", trimmedString);
+console.log("trimmedString length: ", trimmedString.length)
 }
