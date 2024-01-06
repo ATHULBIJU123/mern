@@ -74,7 +74,7 @@ console.log("window.place:",window.place);
 {
   //Datatype
 
-    //String(Sequence of characters)
+    //String(Sequence of characters) (Strings are immutable)
     let name = 'John';
     console.log("name: ",name);
     console.log("type of name : ",typeof(name));
@@ -155,7 +155,9 @@ console.log("window.place:",window.place);
 
 
 {
-//Operators -----(05-1-24)
+//Operators in JavaScript-----(05-1-24)
+
+    //Arithmetic Operators
 
     //  ++ -> add 1
     //  -- -> subs 1
@@ -180,28 +182,57 @@ console.log("window.place:",window.place);
     let PostDecrement = d--;
     console.log("PostDecrement : ", PostDecrement);
 
-}
 
 
-{
-//Assignment Operators
     let x = 100;
-    console.log("x:",x)
+    console.log("x:",x);
 
     let y = 200;
-    console.log("y:",y)
+    console.log("y:",y);
 
+    x=x+y
+    console.log("x:",x);
+
+    x=x-y;
+    console.log("x:",x);
+
+    x=y/x;
+    console.log("x1:",x);
+
+    x=y%x;
+    console.log("x1:",x);
+
+    x=x*y;
+    console.log("x:",x);
+    
+    x=x**y;
+    console.log("x:",x);
+
+//Assignment Operators
+    console.log("Assignment Operators");
     x=y;
-    console.log("x:",x)
+    console.log("x:",x);
 
     x+=y;//x=x+y
-    console.log("x:",x)
+    console.log("x1:",x);
+
+    x-=y;//x=x-y
+    console.log("x2:",x);
+
+    x*=y;//x=x*y
+    console.log("x3:",x);
+
+    x/=y;//x=x/y
+    console.log("x4:",x);
+
 
 }
 
 
 {
 //Comparison Operators
+    console.log("Comparison Operators");
+
     let a=10;
     let b=11;
 
@@ -238,6 +269,28 @@ console.log("window.place:",window.place);
 
     let val3 = "Hello";
     let val4 = "World";
-    console.log("val3 + val4:", val3 + val4)
+    console.log("val3 + val4:", val3 + val4);
+
+}
+
+{
+    // Arrays(06-01-24)
+    //Arrays are variable which can hold more than one value amd the values in an array is stored in continuous memory locations. 
+    let a=10;//variable
+    let arr = [10,20,"hello",true,false,undefined,null];//Array
+    console.log("array : ",arr);
+
+    //Array Methods
+    let fruits = ["Apple","Orange","Grapes","Jackfruit","Pappaya","Pineapple"];
+    console.log("fruits : ", fruits);
+    
+    let apple = fruits[0];
+    console.log(apple);
+
+    let pappaya = fruits[4];
+    console.log(pappaya);
+
+    let noOfFruits = fruits.length
+
 
 }
