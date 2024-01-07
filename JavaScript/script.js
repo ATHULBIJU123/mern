@@ -290,7 +290,33 @@ console.log("window.place:",window.place);
     let pappaya = fruits[4];
     console.log(pappaya);
 
-    let noOfFruits = fruits.length
+    let noOfFruits = fruits.length; //Finds the number of elements in an array
+    console.log(noOfFruits);
 
+    let fruitsString = fruits.join(' '); //Converts Array to String
+    console.log("Array to String : ",fruitsString);
+
+    let grapeIndex = fruits.indexOf('Grapes'); //Finds index number of an element
+    console.log("grapeIndex : ",grapeIndex);
+
+    fruits.push("Greenapple"); //Adds element to the start of an Array
+    console.log("fruits : ", fruits);
+
+    fruits.unshift("Strawberry"); //Adds element to the start of an array
+    console.log('fruits : ', fruits);
+
+    fruits.pop(); //Removes element from the end of an array
+    console.log("fruits : ", fruits);
+
+    fruits.shift(); //Removes from the start of an array
+    console.log("fruits : ",fruits);
+
+    //Replacing elements in an array
+    fruits[3] = "Watermelon";
+    console.log("fruits : ",fruits);
+    
+    //Splice
+    fruits.splice(1,0,"Blueberry");
+    console.log("fruits : ",fruits);
 
 }
