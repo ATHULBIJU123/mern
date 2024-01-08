@@ -298,7 +298,7 @@ console.log("window.place:",window.place);
     let grapeIndex = fruits.indexOf('Grapes'); //Finds index number of an element
     console.log("grapeIndex : ",grapeIndex);
 
-    fruits.push("Greenapple"); //Adds element to the start of an Array
+    fruits.push("Greenapple"); //Adds element to the end of an Array
     console.log("fruits : ", fruits);
 
     fruits.unshift("Strawberry"); //Adds element to the start of an array
@@ -320,6 +320,8 @@ console.log("window.place:",window.place);
 
 }
 
+
+console.log("Objects")
 {
     //7-01-2024
     
@@ -362,4 +364,51 @@ console.log("window.place:",window.place);
     //Template Literals
     let name = "John";  //cut and paste
     console.log(`name : ${name}`);
+
+    //JSON
+    //JSON(Javascript Object Notation) is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate
+    let obj = {
+        "fruit" : "Jackfruit",
+        "bike" : "Hero Honda",
+        "car" : "Suzuki"
+    };
+    console.log("obj : ", obj);
+    console.log("typeof(obj : ", typeof(obj));
+    console.log("fruit : ", obj.fruit);
+    console.log("bike : ", obj.bike);
+    console.log("car : ", obj.car);
+
+    let data = {
+        name : "John",
+        email : "john@gmail.com",
+        password : "John#123"
+    }
+
+    console.log(`data : ${data}`);
+    console.log(`typeof(data) : ${typeof(data)}`);
+
+    //Converting javascript object to JSON
+    let jsonData = JSON.stringify(data);
+    console.log(`jsonData : ${jsonData}`);
+    console.log(`typeof(jsonData) : ${typeof(jsonData)}`);
+
+    //Parsing JSON
+    let parsedJsonData = JSON.parse(jsonData);
+    console.log(`parsedJsonData : ${parsedJsonData}`)
+    console.log(`typeof(parsedJsonData) : ${typeof(parsedJsonData)}`);
+
+}
+{
+    //Work(08-01-24)
+    let numbers = [1,2,3,4,5];
+    console.log(`numbers : ${numbers}`);
+
+    numbers.push(6);
+    console.log(`numbers : ${numbers}`);
+
+    numbers.shift();
+    console.log(`numbers : ${numbers}`);
+
+    
+
 }
