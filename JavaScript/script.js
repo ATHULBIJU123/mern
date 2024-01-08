@@ -108,7 +108,6 @@ console.log("window.place:",window.place);
 }
 
 
-
 {
 //Javascript String Methods
     let str = "Hello";
@@ -150,7 +149,6 @@ console.log("window.place:",window.place);
     let joinedString = splittedString.join(',');//Converts array to string
     console.log("joinedString : ",joinedString);
 
-
 }
 
 
@@ -181,8 +179,6 @@ console.log("window.place:",window.place);
     let d= 40;
     let PostDecrement = d--;
     console.log("PostDecrement : ", PostDecrement);
-
-
 
     let x = 100;
     console.log("x:",x);
@@ -224,7 +220,6 @@ console.log("window.place:",window.place);
 
     x/=y;//x=x/y
     console.log("x4:",x);
-
 
 }
 
@@ -290,6 +285,10 @@ console.log("window.place:",window.place);
     let pappaya = fruits[4];
     console.log(pappaya);
 
+    let Pineapple = fruits.at(5) //Another method using .at to print element
+    console.log(Pineapple);
+
+
     let noOfFruits = fruits.length; //Finds the number of elements in an array
     console.log(noOfFruits);
 
@@ -319,4 +318,48 @@ console.log("window.place:",window.place);
     fruits.splice(1,0,"Blueberry");
     console.log("fruits : ",fruits);
 
+}
+
+{
+    //7-01-2024
+    
+    let arr = ["John",18,70];
+
+    //Objects (Important!!)
+    //A Javascript object is an entity stored as key value pairs
+    let details = {
+        name : "John",  //name, age and mark are key values
+        age : 18,
+        mark : 70,
+        address : {
+            city : "myCity",
+            street: "myStreet",
+            house: "myHouse",
+        },
+        hobbies : ["Reading","Games","Hockey"],
+    }
+
+    console.log("details : ", details);
+    console.log("type of details : ", typeof(details));
+
+    //Acquiring data
+    console.log("name : ", details.name);
+    console.log("age : ", details.age);
+    console.log("mark : ",details.mark);
+
+    //Updating value
+    details.age = 30;
+    console.log("details : ",details);
+
+    //Adding new key value pairs
+    details.country = "America";
+    console.log("details : ", details);
+
+    //In arrays, we can also pass another array and object as values
+    let fruits = ["Apple","Orange","Grapes","Jackfruit",["Pappaya","Pineapple"],{country : "India", state : "kerala"}];
+    console.log("fruits : ",fruits);
+
+    //Template Literals
+    let name = "John";  //cut and paste
+    console.log(`name : ${name}`);
 }
