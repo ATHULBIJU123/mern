@@ -373,7 +373,7 @@ console.log("Objects")
         "car" : "Suzuki"
     };
     console.log("obj : ", obj);
-    console.log("typeof(obj : ", typeof(obj));
+    console.log("typeof(obj) : ", typeof(obj));
     console.log("fruit : ", obj.fruit);
     console.log("bike : ", obj.bike);
     console.log("car : ", obj.car);
@@ -394,12 +394,16 @@ console.log("Objects")
 
     //Parsing JSON
     let parsedJsonData = JSON.parse(jsonData);
-    console.log(`parsedJsonData : ${parsedJsonData}`)
+    console.log(`parsedJsonData : ${parsedJsonData}`)  //
+    // console.log("parsedJsonData : ",parsedJsonData)  //Gives output in the console
+
     console.log(`typeof(parsedJsonData) : ${typeof(parsedJsonData)}`);
 
 }
+
 {
     //Work(08-01-24)
+        //Arrays
     let numbers = [1,2,3,4,5];
     console.log(`numbers : ${numbers}`);
 
@@ -409,6 +413,39 @@ console.log("Objects")
     numbers.shift();
     console.log(`numbers : ${numbers}`);
 
-    
+    let result =  Array.isArray(numbers);
+    console.log("result : ",result);
 
+    let index4 = numbers.indexOf(4);
+    console.log("index of 4 : ",index4);
+
+        
+        //Objects
+    let person = {
+        name : "Peter",
+        age : 28,
+        city : "New Street",
+    }
+    console.log("person : ",person)
+
+    person.age = 30;
+    console.log("person : ",person)
+    console.log("age : ",person.age)
+
+    person.gender = "male";
+    console.log("person : ",person)
+
+    console.log(Object.hasOwn(person,'country'));
+
+    let address = {
+        city : "myCity",
+        street : "Street0001",
+        house : "Home 101",
+    }
+
+    let PersonalDetails ={
+        ...person,
+        ...address
+    }
+    console.log("PersonalDetails : ",PersonalDetails)
 }
