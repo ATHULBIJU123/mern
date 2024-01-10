@@ -46,3 +46,16 @@
     }
     console.log("PersonalDetails : ",PersonalDetails)
 }
+
+{
+    //Work(10-01-2024)
+
+    // Chapter 2
+    let age = 1;
+    age>10 && age<20? console.log("Age lies between 10 and 20"):console.log("Age doesn't lies between 10 and 20")
+
+    age>18?console.log("You can drive"):console.log("You cannot drive");
+
+    //Chapter 4
+    console.log("har\"".length)
+}

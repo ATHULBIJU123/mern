@@ -527,7 +527,7 @@ console.log("Objects")
             console.log("Invalid number for day")
     }
 
-    let color = prompt("Enter a color");
+    let color = /*prompt*/("Enter a color");
 
     switch(color) {
         case 'green' :
