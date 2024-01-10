@@ -449,3 +449,97 @@ console.log("Objects")
     }
     console.log("PersonalDetails : ",PersonalDetails)
 }
+
+
+{
+    //10-1-2024
+    //Javascript Conditional Statements
+    console.log("Javascript Conditional Statements")
+
+    let age =17;
+
+    //(I)if, if-else, if-elseif-else
+
+    if(age >18){
+        console.log("Allowed");
+    }else{
+        console.log("Not Allowed")
+    }
+
+    if(age > 18){
+        console.log("Allowed");
+    }else if(age > 10 && age<18){
+        console.log("You are a Kid");
+    }else{
+        console.log("Not Allowed");
+    }
+}
+
+{
+    let number1 = /*prompt*/("Enter a number"); //Prompt always gives input as string
+    let num1=Number(number1); // converting to type as "number"
+    console.log("num1 : ", num1);
+    console.log("typeof(num1) : ", typeof(num1));
+
+    let number2 = /*prompt*/("Enter another number");
+    let num2=Number(number2);
+    console.log("num2 : ", num2);
+    console.log("typeof(num2) : ", typeof(num2));
+
+    if(num1>num2){
+        console.log(`${num1} greater than ${num2}`);
+    }else if(num2 > num1){
+        console.log(`${num2} greater than ${num1}`);
+    }else if(num1 === num2) {
+        console.log('Both are equal')
+    }else {
+        console.log('Invalid Number');
+    }
+}
+
+{
+    //(II)Switch Statement
+    let day = Number(/*prompt*/("Enter a number for a day"));
+
+    switch(day){
+        case 1 :
+            console.log("Monday");
+            break;
+        case 2 :
+            console.log("Tuesday");
+            break;
+        case 3 :
+            console.log("Wednesday");
+            break;
+        case 4 :
+            console.log("Thursday");
+            break;
+        case 5 :
+            console.log("Friday");
+            break;
+        case 6 :
+            console.log("Saturday");
+            break;
+        case 7 :
+            console.log("Sunday");
+            break;
+        default :
+            console.log("Invalid number for day")
+    }
+
+    let color = prompt("Enter a color");
+
+    switch(color) {
+        case 'green' :
+            console.log("You can go")
+            break;
+        case 'red' :
+            console.log("Stop, you cannot go");
+            break;
+        case 'yellow' :
+            console.log("Slow Down!, wait for some time");
+            break;
+        default :
+            console.log("Invalid traffic light color")
+    }
+}
