@@ -56,6 +56,32 @@
 
     age>18?console.log("You can drive"):console.log("You cannot drive");
 
+    let x = 11
+    if (x%2 == 0){
+        console.log(`${x} is divisible by 2`);
+    }else if (x%3==0){
+        console.log(`${x} is divisible by 3`);
+    }else {
+        console.log(`${x} is not divisible by 2 and 3`);   
+    }
+
+    let y = 9;
+    if (y%2 == 0 || y%3 == 0){
+        console.log(`${y} is divisible by 2 or 3`)
+    }else {
+        console.log(`${y} is not divisible by 2 or 3`);     
+    }
+
     //Chapter 4
-    console.log("har\"".length)
+    console.log("har\"".length);
+
+    let str = "HELLO WORLD!";
+    let out = str.toLowerCase();
+    console.log("out : ",out);
+    console.log(str.length);
+
+    let string = "Please give me Rs 1000";
+    let amount = string.substring(18);
+    console.log("Amount is Rs",amount)
 }
+

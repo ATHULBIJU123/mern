@@ -234,7 +234,7 @@ console.log("window.place:",window.place);
     console.log("a == b : ",a==b);
     console.log("a !=b : ",a !=b);
     console.log("a === b : ",a===b);//Check both value and datatype, true if both type and value are same
-    console.log("a !==b : ",a!==b);//Checks both value and datatype, true if type or value is same
+    console.log("a !==b : ",a!==b);//Checks both value and datatype, true if type or value is same    console.log(string.length);
     console.log("a < b : ",a<b);
     console.log("a > b : ",a>b);
     console.log("a <= b : ",a<=b);//true if a<b or a=b
@@ -330,7 +330,7 @@ console.log("Objects")
     //Objects (Important!!)
     //A Javascript object is an entity stored as key value pairs
     let details = {
-        name : "John",  //name, age and mark are key values
+        name : "John",  //name, age and mark are key and John,18,70 are its values
         age : 18,
         mark : 70,
         address : {
@@ -542,4 +542,65 @@ console.log("Objects")
         default :
             console.log("Invalid traffic light color")
     }
+}
+
+{
+    //(11-01-2024)
+    //Loops
+
+    //For loop
+    //printing 1 to 10
+
+    console.log(1)
+    console.log(2)
+    console.log(3)
+
+    //Using for loop
+    for (let i = 1; i<=10; i++){
+        console.log(i);
+    }
+
+    let arr = ["apple","mango","orange"];
+    console.log(arr[1])
+    console.log(arr[2])
+
+    //using for loop
+    for(let i=0; i<arr.length;i++){
+        //i=0 -> arr[i] -> arr[0] -> apple
+        //i=1 -> arr[i] -> arr[1] -> mango
+        //i=2 -> arr[i] -> arr[2] -> orange
+        //i=3 -> arr[i] -> arr[3] -> i < arr.length -> 3 < 3 ->false -> loop stops
+        console.log(arr[i]);
+    }
+
+    //For of loop (used in array)
+    console.log("Using for of loop : ");
+    for(let fruit of arr){
+        console.log(fruit);
+    }
+
+    // For in loop
+    let details = {
+        firstName : "John",
+        lastName : "Doe",
+        email : "john@gmail.com"
+    }
+
+    console.log("for in loop : ")
+    for(detail in details) {
+        console.log(`${detail} : ${details[detail]}`);
+    }
+
+    //While loop - based on given condition(ie, it checks only the given criteria to execute the loop)
+    //(Execute loop only the condition is true)
+    let i =9;
+    while (i<=10){
+        console.log(i);
+        i++
+    }
+
+    //do while loop (execute the loop first and then check the condition given)
+    do{
+        console.log(i);
+    }while(i<=10)
 }
