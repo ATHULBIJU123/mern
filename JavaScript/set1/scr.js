@@ -85,3 +85,21 @@
     console.log("Amount is Rs",amount)
 }
 
+
+{
+    let obj = {
+        "name" : "Peter",
+        "age" : "26",
+        "address" : "101, myStreet"
+    };
+
+    let jsonData = JSON.stringify(obj);
+    console.log(`jsonData : ${jsonData}`);
+    console.log(`typeof(jsonData) : ${typeof(jsonData)}`);
+
+    let parsedJsonData = JSON.parse(jsonData);
+    console.log(`parsedJsonData : ${parsedJsonData}`)
+
+    
+
+}

@@ -579,28 +579,29 @@ console.log("Objects")
         console.log(fruit);
     }
 
-    // For in loop
+    // For in loop (commonly used in objects)
     let details = {
         firstName : "John",
         lastName : "Doe",
         email : "john@gmail.com"
     }
 
-    console.log("for in loop : ")
+    console.log("for in loop : ");
     for(detail in details) {
         console.log(`${detail} : ${details[detail]}`);
     }
 
     //While loop - based on given condition(ie, it checks only the given criteria to execute the loop)
     //(Execute loop only the condition is true)
-    let i =9;
+    let i =10;
     while (i<=10){
         console.log(i);
         i++
     }
 
     //do while loop (execute the loop first and then check the condition given)
+    let j = 4;
     do{
-        console.log(i);
+        console.log(j);
     }while(i<=10)
 }
