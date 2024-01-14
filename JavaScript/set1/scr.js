@@ -100,6 +100,70 @@
     let parsedJsonData = JSON.parse(jsonData);
     console.log(`parsedJsonData : ${parsedJsonData}`)
 
-    
+    obj.place ="NewCity"
+    console.log("obj : ",obj);
+}
+
+{
+    let a= 0;
+    if (a > 0) {
+        console.log("Positive") ;
+    } else if (a < 0) {
+        console.log("Negative") ;
+    } else {
+        console.log("Zero") ;
+    }
+}
+/*
+{
+    let day = String(prompt("Ente a Day"))
+    switch(day){
+        case "Sunday" :
+            console.log("Sunday");
+            break;
+        case 'Monday' :
+            console.log("Monday");
+            break;
+        case 'Tuesday' :
+            console.log("Tuesday");
+            break;
+        case 'Wednesday' :
+            console.log("Wednesday");
+            break;
+        case 'Thursday' :
+            console.log("Thursday");
+            break;
+        console.log("WeekDay");
+
+        case 'Friday' :
+            console.log("Friday");
+            break;
+        case 'Saturday' :
+            console.log("Saturday");
+            break;
+        console.log("WeekEnd");
+
+        default :
+            console.log("Invalid Day")
+    }
+
+}
+*/
+
+{
+    let car = [
+        {
+            make: "Volvo",
+            model: "XCL",
+            year: "2020",
+        },
+        {
+        make: "Ford",
+        model: "Mustang",
+        year: "1989",
+        }
+    ]
+    console.log(car)
+
 
 }
