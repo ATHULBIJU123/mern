@@ -165,7 +165,36 @@
         year: "1989",
         }
     ]
-    console.log(car)
+    console.log(car);
+    if(car.year<=1990){
+        console.log("Classic Car")
+    }
+}
 
+{   //Calculator
+    let num1=3
+    let num2=4
 
+    let operator = /*prompt*/("Enter the operator")
+
+    switch(operator){
+        case '+' :
+            console.log(num1 + num2);
+            break;
+        case '-' :
+            console.log(num1 - num2);
+            break;
+        case '*' :
+            console.log(num1 * num2);
+            break;
+        case '/' :
+            console.log(num1 / num2);
+            break;
+        default :
+            console.log("Enter a proper operator")
+    }
+}
+
+{
+    
 }
