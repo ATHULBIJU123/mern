@@ -51,16 +51,15 @@
     //Work(10-01-2024)
 
     // Chapter 2
-    let age = 1;
+    console.group("chapter 2")
+    let age = 15;
     age>10 && age<20? console.log("Age lies between 10 and 20"):console.log("Age doesn't lies between 10 and 20")
 
     age>18?console.log("You can drive"):console.log("You cannot drive");
 
-    let x = 11
-    if (x%2 == 0){
-        console.log(`${x} is divisible by 2`);
-    }else if (x%3==0){
-        console.log(`${x} is divisible by 3`);
+    let x = 12
+    if (x%2 == 0 && x%3 == 0){
+        console.log(`${x} is divisible by 2 and 3`);
     }else {
         console.log(`${x} is not divisible by 2 and 3`);   
     }
@@ -73,6 +72,7 @@
     }
 
     //Chapter 4
+    console.log("Chapter 4")
     console.log("har\"".length);
 
     let str = "HELLO WORLD!";
@@ -87,21 +87,26 @@
 
 
 {
-    let obj = {
-        "name" : "Peter",
+    let person = {
+        "name" : "Alex",
         "age" : "26",
         "address" : "101, myStreet"
     };
 
-    let jsonData = JSON.stringify(obj);
-    console.log(`jsonData : ${jsonData}`);
-    console.log(`typeof(jsonData) : ${typeof(jsonData)}`);
+    console.log("Person : ",person)
+    console.log("type of person : ",typeof(person))
+    let jsonPerson = JSON.stringify(person);
+    // console.log(`jsonPerson1 : ${jsonPerson}`);
+    console.log("jsonPerson : ",jsonPerson);
+    console.log(`typeof(jsonPerson) : ${typeof(jsonPerson)}`);
 
-    let parsedJsonData = JSON.parse(jsonData);
-    console.log(`parsedJsonData : ${parsedJsonData}`)
+    let parsedJsonPerson = JSON.parse(jsonPerson);
+    // console.log(`parsedJsonPerson : ${parsedJsonPerson}`)
+    console.log("parsedJsonPerson : ",parsedJsonPerson)
+    console.log("type of parsedJsonPerson : ",typeof(parsedJsonPerson))
 
-    obj.place ="NewCity"
-    console.log("obj : ",obj);
+    person.place ="NewCity"
+    console.log("PesonDetails : ",person);
 }
 
 {
@@ -114,41 +119,38 @@
         console.log("Zero") ;
     }
 }
-/*
+
 {
-    let day = String(prompt("Ente a Day"))
+    let day = String(/*prompt*/("Enter a Day"))
     switch(day){
-        case "Sunday" :
-            console.log("Sunday");
-            break;
+
         case 'Monday' :
-            console.log("Monday");
+            console.log("WeekDay");
             break;
         case 'Tuesday' :
-            console.log("Tuesday");
+            console.log("WeekDay");
             break;
         case 'Wednesday' :
-            console.log("Wednesday");
+            console.log("WeekDay");
             break;
         case 'Thursday' :
-            console.log("Thursday");
+            console.log("WeekDay");
             break;
-        console.log("WeekDay");
 
         case 'Friday' :
-            console.log("Friday");
+            console.log("WeekEnd");
             break;
         case 'Saturday' :
-            console.log("Saturday");
+            console.log("WeekEnd");
             break;
-        console.log("WeekEnd");
-
+        case "Sunday" :
+            console.log("WeekEnd");
+            break;
         default :
             console.log("Invalid Day")
-    }
 
+    }
 }
-*/
 
 {
     let car = [

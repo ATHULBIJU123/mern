@@ -226,7 +226,7 @@ console.log("window.place:",window.place);
 
 {
 //Comparison Operators
-    console.log("Comparison Operators");
+            console.log("Comparison Operators");
 
     let a=10;
     let b=11;
@@ -269,6 +269,7 @@ console.log("window.place:",window.place);
 }
 
 {
+            console.log("Array")
     // Arrays(06-01-24)
     //Arrays are variable which can hold more than one value amd the values in an array is stored in continuous memory locations. 
     let a=10;//variable
@@ -321,11 +322,11 @@ console.log("window.place:",window.place);
 }
 
 
-console.log("Objects")
 {
+            console.log("Objects")
     //7-01-2024
     
-    let arr = ["John",18,70];
+    let arr = ["John",18,70];//this method is complex when there is multiple data to be sorted.
 
     //Objects (Important!!)
     //A Javascript object is an entity stored as key value pairs
@@ -366,7 +367,7 @@ console.log("Objects")
     console.log(`name : ${name}`);
 
     //JSON
-    //JSON(Javascript Object Notation) is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate
+    //JSON(Javascript Object Notation) is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate.
     let obj = {
         "fruit" : "Jackfruit",
         "bike" : "Hero Honda",
@@ -392,7 +393,7 @@ console.log("Objects")
     console.log(`jsonData : ${jsonData}`);
     console.log(`typeof(jsonData) : ${typeof(jsonData)}`);
 
-    //Parsing JSON
+    //Parsing JSON (to convert json to javascript)
     let parsedJsonData = JSON.parse(jsonData);
     console.log(`parsedJsonData : ${parsedJsonData}`)  //
     // console.log("parsedJsonData : ",parsedJsonData)  //Gives output in the console
@@ -454,7 +455,7 @@ console.log("Objects")
 {
     //10-1-2024
     //Javascript Conditional Statements
-    console.log("Javascript Conditional Statements")
+            console.log("Javascript Conditional Statements")
 
     let age =17;
 
