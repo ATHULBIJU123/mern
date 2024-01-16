@@ -152,22 +152,24 @@
     }
 }
 
-{
+{   
     let car = [
         {
             make: "Volvo",
             model: "XCL",
             year: "2020",
         },
-        {
-        make: "Ford",
-        model: "Mustang",
-        year: "1989",
-        }
+        // {
+        // make: "Ford",
+        // model: "Mustang",
+        // year: "1989",
+        // }
     ]
     console.log(car);
     if(car.year<=1990){
         console.log("Classic Car")
+    }else{
+        console.log("Modern Car")
     }
 }
 
@@ -196,5 +198,5 @@
 }
 
 {
-    
+
 }
