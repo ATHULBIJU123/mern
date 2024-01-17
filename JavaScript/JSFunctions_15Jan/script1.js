@@ -76,6 +76,14 @@ let obj = {
 }
 console.log("\n obj(before function call): ",obj);
 
+function updateObj (obj) {
+    console.log(" \n Inside function");
+    console.log("obj : ,obj");
+}
+
+updateObj(obj);
+console.log("\nobj (after function call):  ", obj)
+
 
 
 
