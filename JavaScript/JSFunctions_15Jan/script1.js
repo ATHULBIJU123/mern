@@ -163,7 +163,7 @@ function MULTIPLICATION(){
 
     for (b = 1; b <=10; b++){
         console.log(a*b)
-        // console.log(`${}`)
+        // console.log(`${a*b} : ${c}`)
     }
 }
 MULTIPLICATION()
@@ -193,12 +193,40 @@ for(let i = 0; i<= 2; i++){
 }
 console.log(str);
 
-//i = 0 -> i<=2 - true
-        //j = 0 -> j<=i -true -> str = str + "*" = "" + "*"
+//i = 0 -> i<=2 - true ->
+        //j = 0 -> j<=i - true -> str = str + "*" = "" + "*" = "*"
+
+        //j = 1 -> j<=i - false 
+    //str = str + '\n' -> str = "*" + "\n" = "*\n"
+// i=1 -> i<=2 - true ->
+        //j = 0 -> j<=i -> 0 <= 1 -> true -> str = str + "*" = "*\n" + "*" = "*\n*"
+        //j = 1 -> j<=i -> 1 <= 1 -> true -> str = str + "*" = "*\n*" + "*" = "*n\**"
+        //j = 2 -> j<=i -> 2 <= 1 -> false -> inner loop stops
+    //str = str + '\n' -> str = "*n\**" + "\n" = "*\n**\n"
+
+//i = 2 -> i <= 2-> 2 <=2 -> true
+        //j = 0 -> j<=i -> 0 <= 2 -> true -> str = str + "*" = "*\n**\n" + "*" = "*\n**\n*"
+        //j = 1 -> j<=i -> 1 <= 2 -> true -> str = str + "*" = "*\n**\n*" + "*" = "*n\**\n**"
+        //j = 2 -> j<=i -> 2 <= 2 -> true -> str = str + "*" = "*\n**\n**" + "*" = "*n\**\n***"
+        //j = 3 -> j<=i -> 3 <= 2 -> false -> inner loop stops
+    //str = str + '\n' -> = "*n\**\n***" + "\n" = "*n\**\n***\n"
+// i =3 -> i <=2 -> 3 <= 2-> fasle -> outer loop stops   
+
 }
 
 //work
 //find sum of first 50 odd and even number
+
+{
+    let a = 1;
+    let b = 3;
+
+    let c = a + b;
+
+    while(a 2 <= 49){
+        
+    }
+}
 
 
 
