@@ -35,7 +35,6 @@ function logNum(a,b,c) {
     console.log("b : ",b);
     console.log("c : ",c);  //a,b,c are the parameters here.
 }
- 
 logNum(30,40,50)            //values are  assigned in declared order.
 
 //Call by Values
@@ -162,14 +161,24 @@ function MULTIPLICATION(){
     c = a*b;
 
     for (b = 1; b <=10; b++){
-        console.log(a*b)
-        // console.log(`${a*b} : ${c}`)
+        // console.log(a*b)
+        console.log(`${a} * ${b} = ${a*b}`)
     }
 }
 MULTIPLICATION()
 
+function multiplicationtable(limit){
+    for(let i = 1; i<=limit;i++){
+        for(let j = 1; j<=10;j++){
+            console.log(`${i}*${j} = ${i*j}`);
+        }
+        console.log(`\nMultiplication Table Of`)
+    }
+}
+multiplicationtable(10)
 
-//Program to reverse a string
+
+// // //Program to reverse a string
 let str = "Hai";
 let reverse = "";
 for (let i =str.length - 1; i >= 0; i--){
@@ -218,19 +227,25 @@ console.log(str);
 //find sum of first 50 odd and even number
 
 {
-    let a = 1;
-    let b = 3;
-
-    let c = a + b;
-
-    while(a 2 <= 49){
-        
+    function oddSum() {
+        let sum = 0;
+        for (i = 1; i < 100; i+=2) {
+            if (i % 2 == 1)
+                sum = sum + i;
+            console.log(sum)
+        }
     }
+    oddSum()
 }
+{
+    function evenSum() {
+        let sum = 0;
+        for (i = 2; i <= 100; i+=2) {
+            if (i % 2 == 0);
+                sum = sum + i;
+            console.log(sum);
+        }
+    }
+    evenSum()
 
-
-
-
-
-
-
+}
