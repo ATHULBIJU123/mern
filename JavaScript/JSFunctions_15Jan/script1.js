@@ -200,7 +200,7 @@ for(let i = 0; i<= 2; i++){
     }
     str = str +'\n';
 }
-console.log(str);
+console.log(str);  
 
 //i = 0 -> i<=2 - true ->
         //j = 0 -> j<=i - true -> str = str + "*" = "" + "*" = "*"
@@ -222,6 +222,33 @@ console.log(str);
 // i =3 -> i <=2 -> 3 <= 2-> fasle -> outer loop stops   
 
 }
+{
+    let str = "";
+    for(let i = 3; i>=1; i--){
+        for(let j = 0; j<i; j++){
+            str = str + "*"
+        }
+    str = str + "\n"
+    }
+    console.log(str)
+}
+// {
+//     let str = "";
+//     for(let i = 5; i >= 1; i++){
+//         for(j =0 ; j<= i; j++);
+//         str = str + "*"
+//     }
+// }
+{
+    let no = '';
+    for (let i = 1; i <= 4; i++) {
+        for (let j = 1 ; j <= i; j++) {
+            no = no + j;
+        }
+        no = no + '\n';
+    }
+    console.log(no);
+}
 
 //work
 //find sum of first 50 odd and even number
@@ -229,23 +256,22 @@ console.log(str);
 {
     function oddSum() {
         let sum = 0;
-        for (i = 1; i < 100; i+=2) {
-            if (i % 2 == 1)
-                sum = sum + i;
-            console.log(sum)
+        for (let i = 1, c = 0; c < 50; i += 2) {
+          sum += i;
+          c++;
         }
+        console.log("oddSum:", sum);
     }
     oddSum()
 }
 {
     function evenSum() {
         let sum = 0;
-        for (i = 2; i <= 100; i+=2) {
-            if (i % 2 == 0);
-                sum = sum + i;
-            console.log(sum);
+        for (let i = 0, c = 0; c <= 50; i += 2) {
+            sum += i;
+            c++;
         }
+        console.log("evenSum:", sum);
     }
     evenSum()
-
 }
