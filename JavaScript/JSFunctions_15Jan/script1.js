@@ -275,3 +275,6 @@ console.log(str);
     }
     evenSum()
 }
+{
+    console.log("New")
+}
