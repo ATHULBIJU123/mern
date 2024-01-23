@@ -282,7 +282,7 @@ console.log(str);
     //23-01-2024
     let arr = [1, 2, 3];
 
-    //Function to calculate sum of elements of a nemrical array
+    //Function to calculate sum of elements of a numerical array
 
     function arrSum(arr) {
         let sum = 0;
@@ -311,4 +311,78 @@ console.log(str);
     let maxValue = arrMax(arr);
     console.log("maxValue : ", maxValue);
 
+}
+
+{
+    //work-23
+    let arr = [1,2,3,4,-2];
+    console.log(arr);
+
+    //Average of an array
+    function arrAvg(arr) {
+        let s = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            s = s + arr[i];
+        }
+        console.log("Sum :",s)
+        console.log("Average :", s/ arr.length)
+    }
+
+    arrAvg(arr);
+
+
+    //Minimum number 
+    function arrMin(arr) {
+        let minValue = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < minValue) {
+                minValue = arr[i];
+            }
+        } 
+        console.log("minValue : ", minValue);
+    }
+
+    arrMin(arr);
+
+
+    //negative to positive
+    function numArr(arr) {
+        let a = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                arr[i] = arr[i] * -1;
+            }
+            console.log(arr[i])
+        }
+    }
+
+    numArr(arr)
+}
+
+{
+    let arr = [1,2,3,4,-2,5];
+    console.log(arr);
+
+    //sum of odd and even numbers
+    function sumArr(arr) {
+        let sum1 = 0;
+        let sum2 = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                sum1 = sum1 + arr[i];
+            }
+
+
+            if(arr[i] % 2 != 0) {
+                sum2 = sum2 + arr[i]
+            }
+
+
+        }
+        console.log("Sum of Even :", sum1)
+        console.log("Sum of Odd :", sum2)
+    }
+    sumArr(arr)
 }
