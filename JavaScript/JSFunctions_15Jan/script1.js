@@ -256,7 +256,7 @@ console.log(str);
 {
     function oddSum() {
         let sum = 0;
-        for (let i = 1, c = 0; c < 50; i += 2) {
+        for (let i = 1, c = 0; c < 10; i += 2) {
           sum += i;
           c++;
         }

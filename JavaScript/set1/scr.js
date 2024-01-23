@@ -198,5 +198,18 @@
 }
 
 {
-
+    //isAdmin
+    let user = {
+        username : "Alan",
+        email : "alan@gmail.com",
+        isAdmin : true,
+    }
+    if(user.isAdmin = true){
+        console.log("Is an Admin")
+    }else{
+        console.log("Not an Admin")
+    }
+}
+{
+    
 }
