@@ -226,7 +226,7 @@ console.log(str);
     let str = "";
     for(let i = 3; i>=1; i--){
         for(let j = 0; j<i; j++){
-            str = str + "*"
+            str = str + "*";
         }
     str = str + "\n"
     }
@@ -234,19 +234,19 @@ console.log(str);
 }
 // Pyramid of Star
 console.log("Pyramid Of Stars")
-// {
-//     function stars() {
-//         let st = "";
-//         for (let i = 5; i <= 1; i++) {
-//             for (j = 0; j <= i; j++); {
-//                 st = st + "*"
-//             }
-//         st = st + "\n"
-//         }
-//         console.log(st);
-//     }
-//     stars();
-// }
+{
+    function stars() {
+        let st = "*";
+        for (let i = 1; i <= 5; i++) {
+            for (j = 1; j <= i; j++); {
+                st = st + "*";
+            }
+        st = st + "\n";
+        }
+        console.log(st);
+    }
+    stars();
+}
 
 {
     let no = '';

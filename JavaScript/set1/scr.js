@@ -211,5 +211,47 @@
     }
 }
 {
-    
+    //student data
+    let student = [
+        {
+            Name : "Alex",
+            Age : "22",
+            Grade : "35"
+        },
+        {
+
+        
+            Name : "Akhil",
+            Age : "23",
+            Grade : "60"
+        },
+
+        {
+            Name : "Ben",
+            Age : "24",
+            Grade : "80"
+        }
+    ]
+
+    if(student.Grade > 40 ){
+        console.log("Passed Students :", student.Grade)
+    }else{
+        console.log("FailednStudents :", student.Grade)
+    }
+}
+{
+    //list of countries
+    let country = [
+        {
+        "name" : "India",
+        "population" : 1000,
+        "capital" : "Delhi"
+    },
+    {
+        "name" : "England",
+        "population" : 100,
+        "capital" : "London"
+    }
+]
+console.log("countrydetails :" ,country);
 }
