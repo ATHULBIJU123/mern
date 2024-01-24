@@ -232,13 +232,22 @@ console.log(str);
     }
     console.log(str)
 }
+// Pyramid of Star
+console.log("Pyramid Of Stars")
 // {
-//     let str = "";
-//     for(let i = 5; i >= 1; i++){
-//         for(j =0 ; j<= i; j++);
-//         str = str + "*"
+//     function stars() {
+//         let st = "";
+//         for (let i = 5; i <= 1; i++) {
+//             for (j = 0; j <= i; j++); {
+//                 st = st + "*"
+//             }
+//         st = st + "\n"
+//         }
+//         console.log(st);
 //     }
+//     stars();
 // }
+
 {
     let no = '';
     for (let i = 1; i <= 4; i++) {
@@ -326,7 +335,7 @@ console.log(str);
             s = s + arr[i];
         }
         console.log("Sum :",s)
-        console.log("Average :", s/ arr.length)
+        console.log("Average :", s / arr.length)
     }
 
     arrAvg(arr);
@@ -378,7 +387,6 @@ console.log(str);
             if(arr[i] % 2 != 0) {
                 sum2 = sum2 + arr[i]
             }
-
 
         }
         console.log("Sum of Even :", sum1)
