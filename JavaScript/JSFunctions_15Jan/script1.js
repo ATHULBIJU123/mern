@@ -224,7 +224,7 @@ console.log(str);
 }
 {
     let str = "";
-    for(let i = 3; i>=1; i--){
+    for(let i = 3; i >= 1; i--){
         for(let j = 0; j<i; j++){
             str = str + "*";
         }
@@ -334,7 +334,7 @@ console.log("Pyramid Of Stars")
         for (let i = 0; i < arr.length; i++) {
             s = s + arr[i];
         }
-        console.log("Sum :",s)
+        console.log("Sum of arr :",s)
         console.log("Average :", s / arr.length)
     }
 
