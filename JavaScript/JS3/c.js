@@ -26,16 +26,16 @@ function miniCalc() {
 
     function calc(n1, opr, n2) {
         switch (opr) {
-            case '+':
-            return add(num1, num2);
-        case '-':
-            return sub(num1, num2);
-        case '*':
-            return mult(num1, num2);
-        case '/':
-            return div(num1, num2);
-        default:
-            return "Invalid operator";
+            case '+' :
+                return add(num1, num2);
+            case '-':
+                return sub(num1, num2);
+            case '*':
+                return mult(num1, num2);
+            case '/':
+                return div(num1, num2);
+            default:
+                return "Invalid operator";
         }
     }
 
