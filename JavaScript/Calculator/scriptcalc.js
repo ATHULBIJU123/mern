@@ -1,5 +1,6 @@
 function clear() {
     document.getElementById("result").value;
+
 }
 
 function display(value) {
@@ -9,5 +10,5 @@ function display(value) {
 
 function calc(value) {
     document.getElementById("btn").value;
-    console.log(value)
 }
+
