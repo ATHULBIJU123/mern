@@ -98,6 +98,12 @@ console.log("fruit1 :", fruit1)
 console.log("fruit2 :", fruit2)
 console.log("fruit3 :", fruit3)
 
+let [fruit4,fruit5,fruit6] = fruits;
+console.log("fruit4 :", fruit4)
+console.log("fruit5 :", fruit5)
+console.log("fruit6 :", fruit6)
+
+
 }
 
 //          Array Functions

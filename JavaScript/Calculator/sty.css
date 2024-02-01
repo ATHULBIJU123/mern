@@ -3,9 +3,6 @@ margin: 4% auto;
 font-family: 'Source Sans Pro', sans-serif;
 letter-spacing: 5px;
 font-size: 1.8rem;
--moz-user-select: none;
--webkit-user-select: none;
--ms-user-select: none;
 }
 
 .calculator {
@@ -81,16 +78,16 @@ div.equal {
 display: inline-block;
 border: 1px solid #3079ED;
 border-radius: 1px;
-width: 17%;
+width: 4%;
+height:20px;
 text-align: center;
-padding: 127px 10px;
+padding: 130px 12px;
 margin: 10px 6px 10px 0;
 vertical-align: top;
-color: #FFF;
+color: #FFFF;
 background-color: #4d90fe;
-transition: all .2s ease-in-out;
 }
 
 div.equal:active {
-font-weight: bold;
+/* font-weight: bold; */
 }
