@@ -84,7 +84,7 @@ let person4 = new Persons('Rose',32,95);
 console.log('person4 : ',person4);
 person4.printAge();
 
-//Prototype
+//Prototype                     creating a new property to a object  outside the define area.
 Persons.prototype.printMark = function () {
     console.log(`I am ${this.name} and my mark is ${this.mark}`);
 }
@@ -137,3 +137,118 @@ console.log("Dog :",dog);
 dog.walk()
 dog.eat()
 dog.printColor()
+
+            //03-02-2024
+            //Without Setters and Getters
+// class Car {
+//     color;
+
+//     constructor(color) {
+//         this.color = color;
+//     }
+
+//     setColor(color) {
+//         this.color = color;
+//     }
+
+//     getColor() {
+//         return this.color;
+//     }
+// }   
+
+// const myCar = new Car("Green");
+// console.log("myCar :", myCar);
+
+// myCar.setColor("Red");
+// console.log("myCar :", myCar);
+
+// let color = myCar.getColor();
+// console.log("color :",color);
+
+// console.log(`I have a ${color} color`);
+
+
+
+//Getters and Setters
+class Car {
+    color;
+
+    constructor(color) {
+        this.color = color;
+    }
+
+    set Color(color) {
+        this.color = color;
+    }
+
+    get Color() {
+        return this.color;
+    }
+} 
+
+const myCar = new Car("Green");
+console.log("myCar :", myCar);
+
+myCar.Color= "Red";             //myCar.setColor() -> not required function call in getters and setters
+console.log("myCar :", myCar); 
+
+let color = myCar.color;        //myCar.getColor
+console.log("color :",color);
+
+console.log(`I have a ${color} color`);
+
+class Button {
+    button;
+    constructor(content) {
+        this.button = document.createElement ('button');
+        this.button.innerHTML = content;
+        document.body.appendChild(this.button);
+    }
+
+    set height(height) {
+        this.button.style.height = height + "px";
+    }
+
+    get height () {
+        return this.button.style.height;
+    }
+
+    set width(width) {
+        this.button.style.width = width + "px";
+    }
+
+    get width () {
+        return this.button.style.width;
+    }
+
+    onclick (fn) {
+        this.button.onclick = fn;
+    }
+}
+const myButton = new Button("Click Here");
+
+myButton.height = 50;
+const height = myButton.height;
+console.log("height :",height);
+
+myButton.width = 150;
+const width = myButton.width;
+console.log("width :",width);
+
+myButton.onclick(function () {
+    console.log("Button Clicked");
+});
+
+class YellowButton extends Button {
+    onclick(fn) {
+        this.button.onclick = function () {
+            this.button.style.background = 'YELLOW';
+            fn();
+        }.bind(this);
+    }
+}
+
+const myYellowButton = new YellowButton("Click me");
+myYellowButton.onclick(function() {
+    console.log("Yellow Button Clicked")
+});
