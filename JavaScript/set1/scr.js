@@ -210,6 +210,7 @@
         console.log("Not an Admin")
     }
 }
+
 {
     //student data
     let student = [
@@ -234,9 +235,10 @@
     ]
 
     if(student.Grade > 40 ){
-        console.log("Passed Students :", student.Grade)
-    }else{
-        console.log("FailednStudents :", student.Grade)
+        console.log("Passed Students :", student.Name)
+    }
+    if(student.Grade < 40) {
+        console.log("FailedStudents :", student.Name)
     }
 }
 {
@@ -255,3 +257,50 @@
 ]
 console.log("countrydetails :" ,country);
 }
+
+
+//Books
+books = [
+    {
+        "title": "The Day",
+        "author": "Alan ronalds",
+        "publishedYear": 1989
+    },
+    {
+        "title": "Drama",
+        "author": "Jefferson",
+        "publishedYear": 2004
+    },
+    {
+        "title": "1984",
+        "author": "Kapil",
+        "publishedYear": 2005
+    },
+];
+
+filterYear = 2000;
+
+filteredBooks = [];
+for (let i = 0; i < books.length; i++) {
+    if (books[i].publishedYear > filterYear) {
+        filteredBooks.push(books[i]);
+    }
+}
+
+console.log("Books published after", filterYear);
+console.log(filteredBooks);
+
+//Temperature
+function categorizeTemperature(temperature) {
+    switch (true) {
+        case temperature < 10:
+            return "Cold";
+        case temperature >= 10 && temperature <= 25:
+            return "Moderate";
+        default:
+            return "Hot";
+    }
+}
+
+const temperature = 15;
+console.log(`The temperature ${temperature}°C is ${categorizeTemperature(temperature)}`);

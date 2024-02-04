@@ -11,7 +11,7 @@ function countDown(n) {
     }
 }
 
-countDown(3); //Normal Function Call
+countDown(4); //Normal Function Call
 
 //n=3 -> else block -> logs 3 -> recursive call countDown(2)
             //n=2 -> else block -> logs 2 -> recursive call countDown(1)
@@ -32,16 +32,29 @@ countDown(3); //Normal Function Call
 // }
 // factorial(5)
 
-function factorial(n){
-    if(n == 1  || n == 0){
-        console.log(1);
-    } else{
-        console.log(n*factorial(n-1));
+// function factorial(n){
+//     if(n == 1  || n == 0){
+//         console.log(1);
+//     } else{
+//         console.log(n*factorial(n-1));
+//     }
+// }
+// factorial(2)
+function factorial(f) {
+    //if the number is 0 or 1, return 1
+    if (f === 0 || f === 1) {
+        return 1;
+    } else {
+        // Recursive case
+        return f * factorial(f - 1);
     }
 }
-factorial(2)
+f=5;
+console.log(`The factorial of ${f} is: ${factorial(f)}`);
+
 
 //DOM Methods
+console.log("DOM Methods")
 
 let headings = document.getElementsByTagName('h1');
 console.log('headings[0] : ', headings[0].textContent); //console without any tags  //calling by index will console each of the div separately
@@ -109,4 +122,4 @@ inp.addEventListener('keyup', function () {
 });
 
 
-console.log("Test commit");z
+console.log("Test commit");
