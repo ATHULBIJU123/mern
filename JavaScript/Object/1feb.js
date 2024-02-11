@@ -252,3 +252,63 @@ const myYellowButton = new YellowButton("Click me");
 myYellowButton.onclick(function() {
     console.log("Yellow Button Clicked")
 });
+
+class Paragraph {
+    paragraph;
+    constructor(content) {
+        this.paragraph = document.createElement ('p');
+        this.paragraph.innerHTML = content;
+        document.body.appendChild(this.paragraph);
+
+    }
+    set border(border) {
+        this.button.style.border = border + "px";
+    }
+
+    get border () {
+        return this.button.style.border;
+    }
+    set margin(margin) {
+        this.button.style.margin = margin + "px";
+    }
+
+    get margin () {
+        return this.button.style.margin;
+    }
+
+    set padding(padding) {
+        this.button.style.padding = padding + "px";
+    }
+
+    get padding () {
+        return this.button.style.padding;
+    }
+
+    // set line-height(line-height) {
+    //     this.button.style.line-height = line-height + "px";
+    // }
+
+    // get line-height () {
+    //     return this.button.style.line-height;
+    // }
+}
+class ColoredParagraph extends Paragraph {
+    constructor(content, border, margin, padding, lineHeight, color) {
+      super(content, border, margin, padding, lineHeight);
+      this._color = color;
+  
+      this.element.style.color = this._color;
+  
+      this.element.addEventListener('mouseenter', () => {
+        this.changeColor('blue');
+      });
+      this.element.addEventListener('mouseleave', () => {
+        this.changeColor(this._color);
+      });
+    }
+  
+    changeColor(newColor) {
+      this.element.style.color = newColor;
+    }
+  }
+  const newParagraph = new Paragraph('p1 asfhsfhufhufhafh');
