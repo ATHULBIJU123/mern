@@ -1,3 +1,4 @@
+
 let xhr = new XMLHttpRequest();
 
 xhr.open("get", 'https://fakestoreapi.com/products');
@@ -11,6 +12,9 @@ xhr.onreadystatechange = function () {
         if (xhr.status === 200); {
             let result = xhr.response;
             console.log("result :",xhr.response);
+            console.log("type of(result) :",typeof(result));
+            
+            
         }
     }
 }
