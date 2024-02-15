@@ -1,11 +1,13 @@
 let btn1 = document.getElementById('b1')
 console.log("Click Bait Button :" ,btn1)
+
 let p1 = document.getElementsByClassName('p1')
 
 console.log("Para1 :" ,p1)
 btn1.addEventListener('click', function(){
     // console.log('Click Event Fired');
     p1.textContent = 'Para1 changed';
+    this.innerHTML = p1;
 })
 
 
