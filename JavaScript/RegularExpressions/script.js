@@ -1,3 +1,6 @@
+//15-02-2024
+//Regular Expresions
+console.log("Regular Expressions")
 const str1 = "The cat is white";
 const str2 = "rat eats fish";
 const str3 = "Is it ok fishe";
@@ -80,6 +83,8 @@ const regexp16 = /fish.*$/i;
 const result16 = regexp16.test(str3);//Here it matches fishe, fishes, fishesss..... 
 console.log("result16 :",result16);//true
 
+
+//16-02-2024
 const str5 = "Hello"
 
 const regexp17 = /[kjm]/i;
