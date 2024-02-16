@@ -79,3 +79,82 @@ console.log("result15", result15);//true
 const regexp16 = /fish.*$/i;
 const result16 = regexp16.test(str3);//Here it matches fishe, fishes, fishesss..... 
 console.log("result16 :",result16);//true
+
+const str5 = "Hello"
+
+const regexp17 = /[kjm]/i;
+const result17 = regexp17.test(str5);//If there is a 'k' or 'j' or 'm' then it will be true
+console.log("result17 :",result17);//False
+
+const regexp18 = /[^kjm]/i;
+const result18 = regexp18.test(str5);//If there is no 'k' or 'j' or 'm' then it will be true
+console.log("result18 :",result18);//true
+
+const regexp19 = /[H+]/i;
+const result19 = regexp18.test(str5);//Atleast one 'H' is required
+console.log("result19 :",result19);//true
+
+const regexp20 = /O$/i;
+const result20 = regexp20.test(str5);//String end with "O"
+console.log("result20 :",result20);//true
+
+const regexp21 = /O?$/i;
+const result21 = regexp21.test(str5);//"O" in the string ending and it is optional\
+console.log("result21 :",result21);//true
+
+//{} - indicates the number of characters, a{2} means "aa", ie 2 * a is required.
+const regexp22 = /L{2}o$/i; //'o' should be exactly after between 2 to 4 L's
+const result22 = regexp22.test(str5);//
+console.log("result22 :",result22);//true
+
+const regexp24 = /L{2,4}o$/i;//"O" should be exactly after betwenn 2 to 4 L's
+const result24 = regexp24.test(str5);//
+console.log("result24 :",result24);//true
+
+const regexp25 = /HeL{2,4}o$/i;//"o" should be exactly after "He" and also after 2 to 4 L's and 'o' is required at the ending
+const result25 = regexp25.test(str5);//
+console.log("result25 :",result25);//true
+
+const regexp26 = /HeL{2,}o$/i;//2 or more "L" is required
+const result26 = regexp26.test(str5);//
+console.log("result26 :",result26);//true
+
+// \ - indicates escape character, usd for matchiong any characters which has special meaning
+const regexp27 = /\d/i; //If there is any digits, it will be true, else it will be false
+const result27 = regexp27.test(str5);//
+console.log("result27 :",result27);//false
+
+const regexp28 = /\D/i; //If there is any non-digits it will be true, if there is only digits it will be false
+const result28 = regexp28.test(str5);//
+console.log("result28 :",result28);//true
+
+//Suppose we want to match '.' in a string, since '.' has a special meaning in regular expressions it will not work as expected and will match everything
+
+const regexp29 = /./i; //If there is a '.' or anything in the string, it will match and gives true
+const result29 = regexp29.test(str5);//
+console.log("result29 :",result29);//true
+
+//So we can write it as 
+const regexp30 = /\./i; //If there is a '.' in the string it matches, else it will be false
+const result30 = regexp30.test(str5);//
+console.log("result30 :",result30);//false
+
+//So '\' (backslash) is uded to escape special characters
+
+// console.log("\nData Validation")
+// //Data Validation
+
+// //1
+// const regexpForDate = /^\d{1,2}-\d{1,2}-\d{4}$/i; //String should start with 1 or 2 digits, then after '-' symbol, then again 1 or 2 digits, after '-', ending should be 4
+
+// //2
+// // | - indicates or case 0 | 1 means either 0 or 1 can occur
+// const redexpForDate1 = /^([012]?\d|3[01])-([0]\d|[1][012])
+
+
+
+
+
+
+
+
