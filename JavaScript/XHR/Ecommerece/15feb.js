@@ -23,7 +23,7 @@ xhr.onreadystatechange = function () {
 
             for (let i = 0; i < parsed_result.length; i++) {
                 box = box +`
-                <p class="id">${parsed_result[i].id}</p>`
+                // <p class="id">${parsed_result[i].id}</p>`
                 
             }
 
