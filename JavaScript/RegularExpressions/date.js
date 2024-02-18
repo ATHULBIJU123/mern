@@ -1,7 +1,6 @@
 let date = document.getElementById('date');
 let msg = document.getElementById('error');
 
-
 date.addEventListener('keyup',function () {
     let dateValue = date.value;
     console.log(dateValue);
@@ -16,6 +15,3 @@ date.addEventListener('keyup',function () {
             return;
         }
 });
-
-
-

@@ -64,7 +64,7 @@ window.console.log("Hello world");
 var fruit="apple"; //Corrupts window object
 console.log("window.fruit:",window.fruit);
 
-//Doesn't corrupt window object
+//Doesn't corrupt window object                                     difference is occured by let and var
 let vehicle="bike";
 console.log("window.vehicle:",window.vehicle);
 const place = "Ernakulam";
@@ -82,7 +82,7 @@ console.log("window.place:",window.place);
     //Number (Represents Numerical Values)
     let num=100;
     console.log("num: ",num);
-    console.log("num : ---",typeof(num))
+    console.log("type of num : ---",typeof(num))
 
     //Boolean values (Either true or false)
     let boolTrue = true;
