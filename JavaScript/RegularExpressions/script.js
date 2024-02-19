@@ -148,30 +148,77 @@ console.log("result30 :",result30);//false
 
 
 // 17-02-2024
-console.log("\nData Validation")
-//Data Validation
+console.log("\nDate Validation")
+//Date Validation
 
 //1
 const regexpForDate = /^\d{1,2}-\d{1,2}-\d{4}$/i; //String should start with 1 or 2 digits, then after '-' symbol, then again 1 or 2 digits, after '-', ending should be 4
 
+
+//19-02-2024
 //2
 // | - indicates or case 0 | 1 means either 0 or 1 can occur
-const redexpForDate1 = /^([012]?\d|3[01])-([0]\d|[1][012])-(*\d{4})$/i;
+
+const regexpForDate1 = /^([012]?\d|3[01])-([0]\d|[1][012])-(\d{4})$/i; 
+//In the first group - If the character is 0 or 1 then the second character can be any digits(0-9) or if the character is '3' then the second character should be ' or '1'
+//In the second group if the character is '0' then second character can be anu digits)(0-9) or if the first character is 1 then the second character should be zero or 1 or 2
+//In the last group any four digits representing a year is allowed.
 
 function checkResult(value) {
     const result = regexpForDate1.test(value);
 
     if(result) {
-        return ''
+        return 'Valid Date'
     } else {
         return 'Invalid String'
     }
 }
-const value = "17-02-2024";
+const value = "17-01-2024";
 
 let validation_result = checkResult(value);
 console.log("validation_result : ", validation_result);
 
+function onChange(arg) {
+    let validation_result = checkResult(arg.value);
+    let label = document.getElementById('error');
+    if (validation_result) {
+        label.innerHTML = validation_result;
+    } else {
+        label.innerHTML = validation_result
+    }
+}
+
+
+//Lookahead and Lookbehind
+//"^" and "$" can only be used in the start and end of a string and canot be used in between strings to match, so we use lookaheads for giving starting and ending in between strings
+
+//(?=) - Positive Lookahead, A(?=B) -> Matches : A only if A is followed by B
+//(?!) - Negative Lookahead, A(?!B) -> Matches : A only if A is not  followed by B
+//(?<=) - Positive Lookbehind, (?<=B)A -> Matches : A only if A is preceded by B
+//(?<!) - Negative Lookbehind, (?<!B)A -> Matches : A only if A is not preceded by B
+
+
+{
+    let dateString = '19-09-2024';
+    
+    let regex = /-\d+-/;//This will match '-12-' (also includes hyphens)in result array
+    const result = dateString.match(regex);
+
+    console.log("result : ",result);
+
+    //Inorder to match exactly '12' in dateString we can use lookaheads
+    let regex1 = /(?<=-)\d+(?=-)/; //This will exactly match '12' in string
+    const result1 = dateString.match(regex1);
+    console.log("result1 : ",result1);
+
+    //Example for Negative Lookahead and Negative Lookbehind
+    let phone = "(91)1234567890";
+
+    //To match numbers outside of (91)
+    const phoneRegex = /(?<!\()\d+(?!\))/;
+    const phoneRegexResult = phone.match(phoneRegex);
+    console.log("phoneRegexResult : ",phoneRegexResult);
+}
 
 
 
