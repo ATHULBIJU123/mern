@@ -18,7 +18,9 @@ xhr.onreadystatechange = function () {
             console.log("parsed_result : ",parsed_result);
             // console.log('typeof(parsedresult) :',typeof(parsed_result))
 
-            let box = document.getElementById('box');
+            let box = document.getElementById('container');
+            console.log("box :",box)
+
             let box1 = " ";
 
             for (let i = 0; i < parsed_result.length; i++) {
@@ -29,7 +31,7 @@ xhr.onreadystatechange = function () {
                     <p class="price">${parsed_result[i].price}</p>
                     <p class="description">${parsed_result[i].description}</p>
                     <p class="category">${parsed_result[i].category}</p>
-                    <img src="" alt="" class="picture">${parsed_result[i].picture}
+                    <img src=${parsed_result[i].image} alt="product_image" >
                     <div class="rating">
                         <p class="rate">${parsed_result[i].rate}</p>
                         <p class="count">${parsed_result[i].count}</p>
@@ -38,7 +40,6 @@ xhr.onreadystatechange = function () {
                 
             }
 
-            console.log("box :",box1)
             box.innerHTML = box1;
         }
 
