@@ -8,6 +8,7 @@ jsonForm.addEventListener('submit', function (event) {
     //JSON data
     jsonData = document.getElementById('jsonData').value;
 
+    
     try {
         //parsing the JSON data
         parsedData = JSON.parse(jsonData);
@@ -18,3 +19,4 @@ jsonForm.addEventListener('submit', function (event) {
         errorMessage.textContent = 'Error parsing JSON: ' + error.message;
     }
 });
+jsonData = jsonData.innerHTML

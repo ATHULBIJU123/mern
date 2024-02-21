@@ -129,7 +129,7 @@ user2
         console.log("Reached finally...")
     ])
 
-console.log("\nAsynch")
+console.log("\nAsync")
 //21-02-2024
     async function findUser(id) {
         return new Promise((resolve, reject) => {
