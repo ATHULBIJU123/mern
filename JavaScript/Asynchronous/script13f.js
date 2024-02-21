@@ -1,4 +1,4 @@
-//Synchronuous Singlr Threaded Language
+//Synchronuous Single Threaded Language
 console.log("First")
 console.log("Second")
 console.log("Third")

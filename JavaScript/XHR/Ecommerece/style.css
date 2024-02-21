@@ -3,6 +3,9 @@
     border: 2px solid blue;
     flex-wrap: wrap;
 }
+#container{
+    /* background-color:rgb(195, 204, 228); */
+}
 
 .box{
     border: 2px solid red;
