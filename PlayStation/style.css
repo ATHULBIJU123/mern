@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sony  {
+    background-color: black;
+    color: white;
+    text-align: right;
+    padding: 10px;
+}
