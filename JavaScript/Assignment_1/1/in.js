@@ -1,9 +1,11 @@
 let btn1 = document.getElementById('b1')
 console.log("Click Bait Button :" ,btn1)
 
-let p1 = document.getElementsByClassName('p1')
+let p1 = document.getElementsByClassName('p1');
 
-console.log("Para1 :" ,p1)
+p1.textContent = "Text before click"
+p1.innerHTML = " "
+console.log("P1 before :" ,p1)
 b1.addEventListener('click', function(){
     console.log('Click Event Fired');
     p1.textContent = 'Text after Click';
