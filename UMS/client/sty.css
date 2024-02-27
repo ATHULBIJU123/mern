@@ -1,7 +1,13 @@
-
+body {
+    background-color: black;;
+    color: aliceblue;
+}
 .form {
     display: flex;
     flex-direction: column;
     width: fit-content;
     margin: auto;
+    margin-top: 30vh;
+    font-size: larger;
+
 }
