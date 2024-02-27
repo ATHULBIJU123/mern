@@ -32,7 +32,7 @@ xhr.onreadystatechange = function () {
                     <p class="description">${parsed_result[i].description}</p>
                     <p class="category">${parsed_result[i].category}</p>
                     <img src=${parsed_result[i].image} alt="product_image" class = "pic" >
-                
+                    <div class = "rating">${parsed_result[i]}</div>
                     <p class="rate">${parsed_result[i].rate}</p>
                     <p class="count">${parsed_result[i].count}</p>
                 </div>`
