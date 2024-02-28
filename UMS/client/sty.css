@@ -1,6 +1,6 @@
 body {
-    background-color: black;;
-    color: aliceblue;
+    background-color: rgb(141, 252, 242);;
+    color: rgb(32, 83, 128);
 }
 .form {
     display: flex;
@@ -9,5 +9,5 @@ body {
     margin: auto;
     margin-top: 30vh;
     font-size: larger;
-
+    font-size: 25px;
 }
