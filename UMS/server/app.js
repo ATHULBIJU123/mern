@@ -15,9 +15,9 @@ const server = http.createServer((req, res) => {
     if (parsed_url.pathname === '/' && req.method === "GET") {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.end(fs.readFileSync('../client/index.html'));
-    } else if (parsed_url.pathname === '/style.css' && req.method === "GET") {
+    } else if (parsed_url.pathname === '/sty.css' && req.method === "GET") {
         res.writeHead(200, { 'Content-Type': 'text/css' });
-        res.end(fs.readFileSync('../client/style.css'));
+        res.end(fs.readFileSync('../client/sty.css'));
     } else if (parsed_url.pathname === '/script.js' && req.method === "GET") {
         res.writeHead(200, { 'Content-Type': 'text/javascript' });
         res.end(fs.readFileSync('../client/script.js'));
@@ -25,7 +25,7 @@ const server = http.createServer((req, res) => {
 
     if (req.method === "POST" && parsed_url.pathname === "/submit") {
 
-        let body = "";
+        let body = " ";
 
         req.on('data', (chunks) => {
             console.log("Chunks :", chunks);
@@ -38,9 +38,9 @@ const server = http.createServer((req, res) => {
             console.log("formDatas :", formDatas);
 
             //Do something with the submitted Data ( Eg: Save to a database)
-            console.log("Name : ", formDatas.name);
-            console.log("Email : ",formDatas.email);
-            console.log("Password : ", formDatas.password);
+            console.log("Name : ", formDatas.mytext);
+            console.log("Email : ",formDatas.email);http://localhost:3000
+            console.log("Password : ", formDatas.pass);
 
             let response = {
                 success : true,
@@ -52,7 +52,7 @@ const server = http.createServer((req, res) => {
             let json_response = JSON.stringify(response);
             console.log("json_response : ", json_response);
 
-            res.writeHead(200, {"Content - Type" : "text/json"});
+            res.writeHead(200, {"Content-Type" : "text/json"});
             res.end(json_response);
         });
 
