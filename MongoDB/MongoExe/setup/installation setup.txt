@@ -1,0 +1,2 @@
+sudo chmod +x mongo.sh
+sudo ./mongo.sh
