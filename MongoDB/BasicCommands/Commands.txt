@@ -1,0 +1,31 @@
+mongo - open a connection to the local mongodb instance
+show dbs - show all databases
+use db_name - create and switch to the database
+db - prints current database
+db.dropDatabase() - Delete the current database
+
+show collections - show all collections in database
+db.createcollections("users) - create collection with name users
+
+CRUD - Create Read Update Delete
+
+//Create
+db.users.insertOne({name : "Rahul"}) //Create a new document inside the users collection
+
+db.users.insertMany([{name : "Rahul"},{name : "Kyle"}]) //create multiple new document inside
+
+
+
+
+
+
+
+//Read
+db.users.find() //Get all documents from users collection
+
+db.users.find(<filter object>) //Find all documents that matches the filter
+db.users.find({age : 35})
+
+db.users.find({name : "Rahul"})
+
+db.users.countDocuments(<filter object>)  //Returns documenrs matching the filter objects
