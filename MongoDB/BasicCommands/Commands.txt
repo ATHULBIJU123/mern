@@ -1,3 +1,5 @@
+MongoDb official documentation - https://www.mongodb.com/docs/manual/reference/operator/update/set/
+
 mongo - open a connection to the local mongodb instance
 show dbs - show all databases
 use db_name - create and switch to the database
@@ -5,15 +7,33 @@ db - prints current database
 db.dropDatabase() - Delete the current database
 
 show collections - show all collections in database
-db.createcollections("users) - create collection with name users
+db.createCollection("users") - create collection with name users
+
+
 
 CRUD - Create Read Update Delete
-
 //Create
-db.users.insertOne({name : "Rahul"}) //Create a new document inside the users collection
+db.users.insertOne({name : "Rahul"}) //Create a new document inside the 'users' collection
 
 db.users.insertMany([{name : "Rahul"},{name : "Kyle"}]) //create multiple new document inside
 
+{
+    name : "abc",
+    age : "18",
+}
+
+db.user.insertOne({ firstName: "John",
+    lastName: "King",
+    email: "john.king@abc.com",
+    salary: "33000",
+    DoB: new Date('Mar 24,2011'),
+    skills: ["Angular,"React","MongoDB"],
+    address: {
+                street: "Upper Street",
+                house: "No 1",
+                city : "New York",
+                country: "USA"
+    }})
 
 
 
@@ -29,3 +49,27 @@ db.users.find({age : 35})
 db.users.find({name : "Rahul"})
 
 db.users.countDocuments(<filter object>)  //Returns documenrs matching the filter objects
+
+//Update
+db.user.updateOne({name : "Rahul"},{$set : {name : "Rahul1"}}) //Replaces RAhul with Rahul1, considers only the first matches
+
+db.users.updateMany({name : "Rahul1"},{$set : {name : "Rahul2"}})  //Replaces Rahul1 with Rahul2, considers all matches
+
+db.users.updateMany({age : 35}, {$inc : {age : 5}}) //Increment alla age 35 values to 40 by adding 5
+db.users.replaceOne({name : "Rahul2"},{name : "Rahul3"}); //Replaces the first match, replaces the complete document instead of replacing the field
+
+//Delete
+db.users.deleteOne({name : "Rahul3"}) //Deletes first document that matches filter object
+db.users.deleteMany({age : "75"}) //Delete all documents matching the filter object
+
+
+//Additional Filter objects
+db.user.find({name : {$eq : "John"}}) //Get all the users with the name John
+db.user.find({name : {$ne : "John"}}) //Get all the users with name not equal to John
+db.user.find({age : {$gt : 12}}) //Get all the users whose age greater than 12
+db.user.find({age : {$gte : 10}}) //Get all the users whose age greater than 10
+db.user.find({age : {$lt : 10}}) //Get all the users whose age less than 10
+db.user.find({age : {$lte : 10}}) //Get all the users whose age less than or equal to 10
+
+db.users.find({name : {$in : ["Riya","John"]}})  //Get all the users with the name of "Riya" and "John"
+db.users.find({name : {$nin : ["Riya","John"]}})  //Get all the users that does not have the name of "Riya" and "John"
