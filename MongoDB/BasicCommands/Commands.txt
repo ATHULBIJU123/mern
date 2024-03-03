@@ -33,9 +33,7 @@ db.user.insertOne({ firstName: "John",
                 house: "No 1",
                 city : "New York",
                 country: "USA"
-    }})
-
-
+            }});
 
 
 
@@ -46,9 +44,13 @@ db.users.find() //Get all documents from users collection
 db.users.find(<filter object>) //Find all documents that matches the filter
 db.users.find({age : 35})
 
-db.users.find({name : "Rahul"})
+db.users.find(<filter object>,<select object>)  //Find all documents that matches the filter object but returns only the field specified in the selected object
+db.usersfind({age : 35},{name : 1, _id : 0})
 
-db.users.countDocuments(<filter object>)  //Returns documenrs matching the filter objects
+db.users.findOne({name : "Rahul"})  //Only returns the first document that matches the filter object
+
+db.users.countDocuments(<filter object>)  //Returns documents matching the filter objects, if filter object is empty returns all document count
+
 
 //Update
 db.user.updateOne({name : "Rahul"},{$set : {name : "Rahul1"}}) //Replaces RAhul with Rahul1, considers only the first matches
@@ -60,7 +62,7 @@ db.users.replaceOne({name : "Rahul2"},{name : "Rahul3"}); //Replaces the first m
 
 //Delete
 db.users.deleteOne({name : "Rahul3"}) //Deletes first document that matches filter object
-db.users.deleteMany({age : "75"}) //Delete all documents matching the filter object
+db.users.deleteMany({age : "75"}) //Delete all documents matching the filter object 
 
 
 //Additional Filter objects
@@ -73,3 +75,8 @@ db.user.find({age : {$lte : 10}}) //Get all the users whose age less than or equ
 
 db.users.find({name : {$in : ["Riya","John"]}})  //Get all the users with the name of "Riya" and "John"
 db.users.find({name : {$nin : ["Riya","John"]}})  //Get all the users that does not have the name of "Riya" and "John"
+db.users.find({and : [{name : "Riya"}, {age : 10}]})    //Get all the users with the name "Riya" and age 10
+db.users.find({for : [{name : "Riya"}, {age : 15}]})    //Get all the users with the name "Riya" or age 15
+db.users.find({name : {not : {$eq : "Riya"}}})  //Get all the users with the name other than "Riya"
+db.users.find({age : {$exists : true}})     //Get all the users having an age field
+db.users.find({$expr : {$gt : ["$age","$min_age"]}})    //Get all the users having their age greater than min_age
