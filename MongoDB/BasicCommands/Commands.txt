@@ -22,18 +22,19 @@ db.users.insertMany([{name : "Rahul"},{name : "Kyle"}]) //create multiple new do
     age : "18",
 }
 
-db.user.insertOne({ firstName: "John",
-    lastName: "King",
-    email: "john.king@abc.com",
-    salary: "33000",
-    DoB: new Date('Mar 24,2011'),
-    skills: ["Angular,"React","MongoDB"],
-    address: {
-                street: "Upper Street",
-                house: "No 1",
-                city : "New York",
-                country: "USA"
-            }});
+> db.user.insertOne({ 
+    firstName: "John",     
+    lastName: "King",     
+    email: "john.king@abc.com",     
+    salary: "33000",     
+    DoB: new Date('Mar 24,2011'), 
+    skills : ["Angular","React","MongoDB"],
+    address: {street: "Upper Street",
+    house : "No 1",city : "New York", country : "USA" }, 
+    age : 10
+    })
+
+
 
 
 
@@ -75,11 +76,8 @@ db.user.find({age : {$lte : 10}}) //Get all the users whose age less than or equ
 
 db.users.find({name : {$in : ["Riya","John"]}})  //Get all the users with the name of "Riya" and "John"
 db.users.find({name : {$nin : ["Riya","John"]}})  //Get all the users that does not have the name of "Riya" and "John"
-db.users.find({and : [{name : "Riya"}, {age : 10}]})    //Get all the users with the name "Riya" and age 10
-db.users.find({for : [{name : "Riya"}, {age : 15}]})    //Get all the users with the name "Riya" or age 15
-db.users.find({name : {not : {$eq : "Riya"}}})  //Get all the users with the name other than "Riya"
-db.users.find({age : {$exists : true}})     //Get all the users having an age field
-db.users.find({$expr : {$gt : ["$age","$min_age"]}})    //Get all the users having their age greater than min_age
+
+//Last queries on TUF
 
 //04-03-2024
 
