@@ -22,18 +22,17 @@ db.users.insertMany([{name : "Rahul"},{name : "Kyle"}]) //create multiple new do
     age : "18",
 }
 
-db.user.insertOne({ firstName: "John",
-    lastName: "King",
-    email: "john.king@abc.com",
-    salary: "33000",
-    DoB: new Date('Mar 24,2011'),
-    skills: ["Angular,"React","MongoDB"],
-    address: {
-                street: "Upper Street",
-                house: "No 1",
-                city : "New York",
-                country: "USA"
-    }})
+> db.user.insertOne({ 
+    firstName: "John",     
+    lastName: "King",     
+    email: "john.king@abc.com",     
+    salary: "33000",     
+    DoB: new Date('Mar 24,2011'), 
+    skills : ["Angular","React","MongoDB"],
+    address: {street: "Upper Street",
+    house : "No 1",city : "New York", country : "USA" }, 
+    age : 10
+    })
 
 
 
@@ -73,3 +72,20 @@ db.user.find({age : {$lte : 10}}) //Get all the users whose age less than or equ
 
 db.users.find({name : {$in : ["Riya","John"]}})  //Get all the users with the name of "Riya" and "John"
 db.users.find({name : {$nin : ["Riya","John"]}})  //Get all the users that does not have the name of "Riya" and "John"
+
+//Last queries on TUF
+
+//04-03-2024
+
+//Additional Update objects
+db.user.updateOne({age : 15}, ({$set : {name : "Hi"}}))    //Updates the name of the first user with age of 15 to the value "Hi"
+db.user.updateOne({age : 10}, {$inc : {age : 5}})      //Add 5 to the age of first user with age of 10
+db.user.updateMany({},{$rename : {age : "years"}})     //Renames the field "age" to "years" of all the users
+db.user.updateOne({age : 15},{$unset : {age : "" }})   //Removes the age field from the first user with age of 15
+db.user.updateMany({},{$push : {social_medias : "Instagram"}})    //Add "Instagram" to the "social_medias" array of all users
+db.user.updateMany({}, {$pull : {social_medias : "Instagram"}})   //Removes "Instagram" from the "social_medias" array of all users
+
+//Read modifiers
+db.user.find().sort({name : 1, {age : -1}})    //Get all users sorted by name in alphabetical order and if any names are the same, sort by age in reverse order
+db.user.find().limit(2)    //only returns the first 2 users
+db.user.find().skip(4)     //Skip the first 4 users when returning the result. Skip and limit are combined for applying pagination.
