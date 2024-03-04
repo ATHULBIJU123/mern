@@ -80,3 +80,21 @@ db.users.find({for : [{name : "Riya"}, {age : 15}]})    //Get all the users with
 db.users.find({name : {not : {$eq : "Riya"}}})  //Get all the users with the name other than "Riya"
 db.users.find({age : {$exists : true}})     //Get all the users having an age field
 db.users.find({$expr : {$gt : ["$age","$min_age"]}})    //Get all the users having their age greater than min_age
+
+//04-03-2024
+
+//Additional Update objects
+db.user.updateOne({age : 15}, ({$set : {name : "Hi"}}))    //Updates the name of the first user with age of 15 to the value "Hi"
+db.user.updateOne({age : 10}, {$inc : {age : 5}})      //Add 5 to the age of first user with age of 10
+db.user.updateMany({},{$rename : {age : "years"}})     //Renames the field "age" to "years" of all the users
+db.user.updateOne({age : 15},{$unset : {age : "" }})   //Removes the age field from the first user with age of 15
+db.user.updateMany({},{$push : {social_medias : "Instagram"}})    //Add "Instagram" to the "social_medias" array of all users
+db.user.updateMany({}, {$pull : {social_medias : "Instagram"}})   //Removes "Instagram" from the "social_medias" array of all users
+
+//Read modifiers
+db.user.find().sort({name : 1, {age : -1}})    //Get all users sorted by name in alphabetical order and if any names are the same, sort by age in reverse order
+db.user.find().limit(2)    //only returns the first 2 users
+db.user.find().skip(4)     //Skip the first 4 users when returning the result. Skip and limit are combined for applying pagination.
+
+
+ 
