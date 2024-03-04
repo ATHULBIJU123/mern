@@ -95,6 +95,3 @@ db.user.updateMany({}, {$pull : {social_medias : "Instagram"}})   //Removes "Ins
 db.user.find().sort({name : 1, {age : -1}})    //Get all users sorted by name in alphabetical order and if any names are the same, sort by age in reverse order
 db.user.find().limit(2)    //only returns the first 2 users
 db.user.find().skip(4)     //Skip the first 4 users when returning the result. Skip and limit are combined for applying pagination.
-
-
- 
