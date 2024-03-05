@@ -58,7 +58,7 @@ const server = http.createServer((req, res) => {
 
             //Do something with the submitted Data ( Eg: Save to a database)
             console.log("Name : ", formDatas.mytext);
-            console.log("Email : ",formDatas.email);http://localhost:3000
+            console.log("Email : ",formDatas.email); http://localhost:3000
             console.log("Password : ", formDatas.pass);
 
             let response = {
