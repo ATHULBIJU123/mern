@@ -46,7 +46,7 @@ db.users.find(<filter object>) //Find all documents that matches the filter
 db.users.find({age : 35})
 
 db.users.find(<filter object>,<select object>)  //Find all documents that matches the filter object but returns only the field specified in the selected object
-db.usersfind({age : 35},{name : 1, _id : 0})
+db.users.find({age : 35},{name : 1, _id : 0})
 
 db.users.findOne({name : "Rahul"})  //Only returns the first document that matches the filter object
 

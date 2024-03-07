@@ -6,6 +6,7 @@ const querystring = require('querystring');
 const { MongoClient } = require('mongodb');
 const { error } = require('console');
 
+
 //Connection URL
 const mongodb_url = 'mongodb://localhost:27017';
 const client = new MongoClient(mongodb_url);
@@ -19,18 +20,15 @@ async function connect() {
     await client.connect();
 
     console.log('Connected successfully to server');
-
-
     return 'done';
 }
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
 
     const db = client.db(dbName);
     const collection = db.collection(collName);
 
-    const req_url = req.url;
-    console.log("req_url :", req_url);
+    const req_url = ("req_url :", req.url);
 
     let parsed_url = url.parse(req.url);
     console.log("parsed_url : ", parsed_url);
@@ -103,6 +101,7 @@ const server = http.createServer((req, res) => {
         });
 
     }
+
     if (req.method === "GET" && parsed_url.pathname === "/getData") {
 
         //Inserting formDatas to the database
@@ -142,6 +141,7 @@ const server = http.createServer((req, res) => {
 })
 
 
+
 connect()
     .then((message) => {
         console.log('message :', message);
@@ -155,3 +155,8 @@ connect()
         })
 
     });
+
+
+
+
+
