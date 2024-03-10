@@ -14,15 +14,38 @@
 }
 
 .navbar{
-  font-weight: 800;
+  font-weight: 400;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.si{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 5px;
+    /* justify-content: space-evenly; */
+    margin-left: 450px;
+    
+}
+
+.signin{
+    background-color:#0070CC;
+    color: white;
+    border-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    width: 80px;
+    height: 25px;
+    margin-right: 20px;
 }
 
 .slider{
     margin: 35px;
     display: flex;
     justify-content: center;
+    
 }
 .a img {
     width: 250px;
@@ -36,6 +59,7 @@
     margin-left: 5px;
     margin-right: 5px;
     display: inline-block;
+    text-align: center;
 }
 
 #one{
@@ -50,5 +74,35 @@
 }
 .games{
     margin-top: 80px;
+    text-align: left;
+    background-color: black;
+}
+
+.games h1,h4{
+    color: white;
     text-align: center;
+}
+
+.plus{
+    background-image: url(./Images/pic/div3/play-play-play-ps-plus-background-desktop-01-ja-jp-03jul23.webp);
+    text-align: center;
+    align-items: center;
+}
+.plus,.carousel{
+    justify-content: center;
+    /* background-color: #0070CC; */
+    margin: auto;
+}
+.disc{
+    background-color: #0070CC;
+    color: white;
+    width: 200px;
+    /* align-items: center; */
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 25px;
+}
+.disc p{
+    padding: 10px;
 }

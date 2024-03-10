@@ -103,9 +103,8 @@ const server = http.createServer((req, res) => {
         });
 
     }
-    if (req.method === "GET" && parsed_url.pathname === "/getData") {
+    if (req.method === "GET" && parsed_url.pathname === "/getData") async () => {
 
-        //Inserting formDatas to the database
         let datas = await collection.find().toArray();
         console.log("datas : ", datas);
 
