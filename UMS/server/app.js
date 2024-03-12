@@ -221,9 +221,6 @@ if (req.method === "DELETE" && parsed_url.pathname === "/delete") {
 
     req.on('end', async () => {
         let formDatas = querystring.parse(body);
-
-        // Assuming formDatas contains the identifier for the document to delete
-        // For example, an '_id' field
         const deleteQuery = { _id: formDatas._id };
 
         await collection.deleteOne(deleteQuery)
