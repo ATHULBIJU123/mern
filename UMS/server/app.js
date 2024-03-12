@@ -46,6 +46,8 @@ const server = http.createServer((req, res) => {
         res.end(fs.readFileSync('../client/script.js'));
     }
 
+
+    //Post
     if (req.method === "POST" && parsed_url.pathname === "/submit") {
 
         let body = "";
@@ -103,6 +105,8 @@ const server = http.createServer((req, res) => {
         });
 
     }
+
+    //Get
     if (req.method === "GET" && parsed_url.pathname === "/getData") async () => {
 
         let datas = await collection.find().toArray();
@@ -138,8 +142,134 @@ const server = http.createServer((req, res) => {
 
     }
 
-})
+    //Update
+    if (req.method === "PUT" && parsed_url.pathname === "/update") {
+        let body = "";
+    
+        req.on('data', (chunks) => {
+            body += chunks.toString();
+        });
+    
+        req.on('end', async () => {
+            let formDatas = querystring.parse(body);
+    
+            const updateQuery = { _id: formDatas._id };
+            const updateData = {
+                $set: {
+                    mytext: formDatas.mytext,
+                    email: formDatas.email,
+                    pass: formDatas.pass
+                }
+            };
+    
+            await collection.updateOne(updateQuery, updateData)
+                .then((result) => {
+                    if (result.modifiedCount > 0) {
+                        console.log("Document updated successfully");
+    
+                        let response = {
+                            success: true,
+                            statusCode: 200,
+                            data: formDatas,
+                            message: "Document updated successfully"
+                        };
+    
+                        let json_response = JSON.stringify(response);
+                        res.writeHead(200, { "Content-Type": "application/json" });
+                        res.end(json_response);
+                    } else {
+                        console.log("Document not found");
+    
+                        let response = {
+                            success: false,
+                            statusCode: 404,
+                            data: formDatas,
+                            message: "Document not found"
+                        };
+    
+                        let json_response = JSON.stringify(response);
+                        res.writeHead(404, { "Content-Type": "application/json" });
+                        res.end(json_response);
+                    }
+                })
+                .catch((error) => {
+                    console.log("Error updating document:", error);
+    
+                    let response = {
+                        success: false,
+                        statusCode: 500,
+                        data: formDatas,
+                        message: "Failed to update document"
+                    };
+    
+                    let json_response = JSON.stringify(response);
+                    res.writeHead(500, { "Content-Type": "application/json" });
+                    res.end(json_response);
+                });
+        });
+    }
 
+
+
+//Delete
+if (req.method === "DELETE" && parsed_url.pathname === "/delete") {
+    let body = "";
+
+    req.on('data', (chunks) => {
+        body += chunks.toString();
+    });
+
+    req.on('end', async () => {
+        let formDatas = querystring.parse(body);
+
+        // Assuming formDatas contains the identifier for the document to delete
+        // For example, an '_id' field
+        const deleteQuery = { _id: formDatas._id };
+
+        await collection.deleteOne(deleteQuery)
+            .then((result) => {
+                if (result.deletedCount > 0) {
+                    console.log("Document deleted successfully");
+
+                    let response = {
+                        success: true,
+                        statusCode: 200,
+                        message: "Document deleted successfully"
+                    };
+
+                    let json_response = JSON.stringify(response);
+                    res.writeHead(200, { "Content-Type": "application/json" });
+                    res.end(json_response);
+                } else {
+                    console.log("Document not found");
+
+                    let response = {
+                        success: false,
+                        statusCode: 404,
+                        message: "Document not found"
+                    };
+
+                    let json_response = JSON.stringify(response);
+                    res.writeHead(404, { "Content-Type": "application/json" });
+                    res.end(json_response);
+                }
+            })
+            .catch((error) => {
+                console.log("Error deleting document:", error);
+
+                let response = {
+                    success: false,
+                    statusCode: 500,
+                    message: "Failed to delete document"
+                };
+
+                let json_response = JSON.stringify(response);
+                res.writeHead(500, { "Content-Type": "application/json" });
+                res.end(json_response);
+            });
+    });
+}
+})
 
 connect()
     .then((message) => {
