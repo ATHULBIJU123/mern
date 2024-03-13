@@ -19,12 +19,10 @@ async function connect() {
     await client.connect();
 
     console.log('Connected successfully to server');
-
-
     return 'done';
 }
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
 
     const db = client.db(dbName);
     const collection = db.collection(collName);
@@ -107,16 +105,17 @@ const server = http.createServer((req, res) => {
     }
 
     //Get
-    if (req.method === "GET" && parsed_url.pathname === "/getData") async () => {
+    if (req.method === "GET" && parsed_url.pathname === "/getData") {
 
-        let datas = await collection.find().toArray();
-        console.log("datas : ", datas);
 
-        if (datas) {
+        let formDatas = await collection.find().toArray();
+        console.log("datas : ", formDatas);
+
+        if (formDatas) {
             let response = {
                 "success": true,
                 statusCode: 200,
-                datas: datas,
+                datas: formDatas,
                 message: "Success",
             }
             let json_response = JSON.stringify(response);
@@ -128,7 +127,7 @@ const server = http.createServer((req, res) => {
             let response = {
                 "success": true,
                 statusCode: 200,
-                datas: datas,
+                datas: formDatas,
                 message: "Success",
             }
 
@@ -138,7 +137,6 @@ const server = http.createServer((req, res) => {
             res.writeHead(200, { 'Content-Type': 'text/json' });
             res.end(json_response);
         }
-
 
     }
 
@@ -221,6 +219,8 @@ if (req.method === "DELETE" && parsed_url.pathname === "/delete") {
 
     req.on('end', async () => {
         let formDatas = querystring.parse(body);
+
+        // For example, an '_id' field
         const deleteQuery = { _id: formDatas._id };
 
         await collection.deleteOne(deleteQuery)
