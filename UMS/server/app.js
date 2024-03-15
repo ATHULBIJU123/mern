@@ -3,7 +3,7 @@ const url = require('url');
 const port = 3000;
 const fs = require('fs');
 const querystring = require('querystring');
-const { MongoClient } = require('mongodb');
+const { MongoClient,ObjectId } = require('mongodb');
 const { error } = require('console');
 
 //Connection URL
@@ -218,12 +218,18 @@ if (req.method === "DELETE" && parsed_url.pathname === "/delete") {
     });
 
     req.on('end', async () => {
-        let formDatas = querystring.parse(body);
+        console.log("body :",body)
 
         // For example, an '_id' field
-        const deleteQuery = { _id: formDatas._id };
 
-        await collection.deleteOne(deleteQuery)
+        let parsedData = JSON.parse(body)
+        console.log("parsedData: ", parsedData)
+    
+        let id = new ObjectId(parsedData.id)
+        const deleteQuery = {id};
+        // console.log("NewId :", id);
+
+        await collection.deleteOne(deleteQuery._id)
             .then((result) => {
                 if (result.deletedCount > 0) {
                     console.log("Document deleted successfully");
