@@ -224,12 +224,13 @@ if (req.method === "DELETE" && parsed_url.pathname === "/delete") {
 
         let parsedData = JSON.parse(body)
         console.log("parsedData: ", parsedData)
+        // console.log("type of parseddata :",typeof(parsedData))
     
-        let id = new ObjectId(parsedData.id)
-        const deleteQuery = {id};
-        // console.log("NewId :", id);
+        let id = new ObjectId(parsedData._id)
+        const deleteQuery = {_id : id};
+        console.log("Id :", id);
 
-        await collection.deleteOne(deleteQuery._id)
+        await collection.deleteOne(deleteQuery.id)
             .then((result) => {
                 if (result.deletedCount > 0) {
                     console.log("Document deleted successfully");
