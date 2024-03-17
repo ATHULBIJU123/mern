@@ -22,6 +22,13 @@ async function connect() {
     return 'done';
 }
 
+async function updateOne(_id, updatedData) {
+
+        const filter = { _id: ObjectId(_id) };
+        const updateOperation = { $set: updatedData };
+}
+
+
 const server = http.createServer(async (req, res) => {
 
     const db = client.db(dbName);
@@ -146,17 +153,19 @@ const server = http.createServer(async (req, res) => {
     
         req.on('data', (chunks) => {
             body += chunks.toString();
+            console.log("body :",body)
         });
     
         req.on('end', async () => {
-            let formDatas = querystring.parse(body);
+            let updateDatas = querystring.parse(body);
+            console.log("updateDatas : ",updateDatas);
     
-            const updateQuery = { _id: formDatas._id };
+            const updateQuery = { _id: updateDatas._id };
             const updateData = {
                 $set: {
-                    mytext: formDatas.mytext,
-                    email: formDatas.email,
-                    pass: formDatas.pass
+                    mytext: updateDatas.mytext,
+                    email: updateDatas.email,
+                    pass: updateDatas.pass
                 }
             };
     
@@ -230,7 +239,8 @@ if (req.method === "DELETE" && parsed_url.pathname === "/delete") {
         const deleteQuery = {_id : id};
         console.log("Id :", id);
 
-        await collection.deleteOne(deleteQuery.id)
+        await collection.deleteOne(deleteQuery
+            )
             .then((result) => {
                 if (result.deletedCount > 0) {
                     console.log("Document deleted successfully");

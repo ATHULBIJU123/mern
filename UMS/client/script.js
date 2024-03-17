@@ -2,7 +2,7 @@ let sub = document.getElementById('sub');
 console.log("data submitted",sub);
 
 
-sub.addEventListener('load',async function getuserdata(){
+sub.addEventListener('onLoad',async function getuserdata(){
     let userData = await fetch ('http://localhost:3000/getData');
     console.log("userData : ",userData);
     
