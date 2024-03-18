@@ -132,10 +132,9 @@ const server = http.createServer(async (req, res) => {
             }
 
             let json_response = JSON.stringify(response);
-
-
             res.writeHead(200, { 'Content-Type': 'text/json' });
             res.end(json_response);
+            
         }
 
     }
@@ -145,85 +144,57 @@ const server = http.createServer(async (req, res) => {
         let body;
         let id;
         let updateData;
-        req.on('data', (chunks)=> {
-          console.log("chunks : ", chunks);
-          let datas = chunks.toString();
-          console.log("datas : ", datas);
-          console.log("type of datas :", typeof(datas)) //string
-          
-          //string to object
-          body = JSON.parse(datas);
-          console.log("body : ", body);
-          console.log("type of body :", typeof(body)) //object
+        req.on('data', (chunks) => {
+            console.log("chunks : ", chunks);
+            let datas = chunks.toString();
+            console.log("datas : ", datas);
+            console.log("type of datas :", typeof (datas)) //string
 
-        
-        //   id = body.id;
-        //   console.log("id : ", id);
-        //   console.log("type (id) : ", typeof(id))
+            //string to object
+            body = JSON.parse(datas);
+            console.log("body : ", body);
+            console.log("type of body :", typeof (body)) //object
 
-        //   let _id = new ObjectId(id);
-        //   console.log("_id : ", _id);
-        //   console.log("type (_id) : ", typeof(_id));
-        
-            const updateData = {
-                $set: {
-                    mytext: datas.mytext,
-                    email: datas.email,
-                    pass: datas.pass
-                }
+
+            id = body.id;
+            console.log("id : ", id);
+            console.log("type (id) : ", typeof (id))
+
+            let _id = new ObjectId(id);
+            console.log("_id : ", _id);
+            console.log("type (_id) : ", typeof (_id));
+
+            updateData = {
+                mytext: datas.mytext,
+                email: datas.email,
+                pass: datas.pass
             };
+
+            console.log("updateData : ", updateData)
         });
-    
+
         req.on('end', async () => {
-            // let updateDatas = JSON.parse(body);
-            // console.log("updateDatas : ",updateDatas);
-            // let updateData;
-            await collection.updateOne(updateData)
-                .then((result) => {
-                    if (result.modifiedCount > 0) {
-                        console.log("Document updated successfully");
-    
-                        let response = {
-                            success: true,
-                            statusCode: 200,
-                            data: formDatas,
-                            message: "Document updated successfully"
-                        };
-    
-                        let json_response = JSON.stringify(response);
-                        res.writeHead(200, { "Content-Type": "application/json" });
-                        res.end(json_response);
-                    } else {
-                        console.log("Document not found");
-    
-                        let response = {
-                            success: false,
-                            statusCode: 404,
-                            data: formDatas,
-                            message: "Document not found"
-                        };
-    
-                        let json_response = JSON.stringify(response);
-                        res.writeHead(404, { "Content-Type": "application/json" });
-                        res.end(json_response);
-                    }
+
+            console.log("id : ", id);
+            console.log("typeOf(id) : ", typeof(id))
+            let _id = new ObjectId(id);     //Converting string id to mongodb object id
+            console.log("_id : ", _id);
+            console.log("type (_id) : ", typeof(_id));
+
+            await collection.updateOne({_id},{$set : updateData})
+                .then((messaage) => {
+                    console.log("Document updated successfully", messaage);
+                    res.writeHead(200, { "Content-Type": "application/json" });
+                    res.end('Success!');  
                 })
                 .catch((error) => {
                     console.log("Error updating document:", error);
-    
-                    let response = {
-                        success: false,
-                        statusCode: 500,
-                        data: updateData,
-                        message: "Failed to update document"
-                    };
-    
-                    let json_response = JSON.stringify(response);
                     res.writeHead(500, { "Content-Type": "application/json" });
-                    res.end(json_response);
+                    res.end("failed!!");
                 });
         });
     }
+
 
 
 

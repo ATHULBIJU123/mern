@@ -7,11 +7,20 @@
 
 <link rel="stylesheet" href="data.css">
 </head>
-<body>
-    <table id="tableData">
-
+<body onload="getData()">
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="content">
+        </tbody>
     </table>
-
     <script src="script.js"></script>
 </body>
 </html> 
