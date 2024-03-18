@@ -22,13 +22,6 @@ async function connect() {
     return 'done';
 }
 
-async function updateOne(_id, updatedData) {
-
-        const filter = { _id: ObjectId(_id) };
-        const updateOperation = { $set: updatedData };
-}
-
-
 const server = http.createServer(async (req, res) => {
 
     const db = client.db(dbName);
@@ -149,27 +142,43 @@ const server = http.createServer(async (req, res) => {
 
     //Update
     if (req.method === "PUT" && parsed_url.pathname === "/update") {
-        let body = "";
-    
-        req.on('data', (chunks) => {
-            body += chunks.toString();
-            console.log("body :",body)
+        let body;
+        let id;
+        let updateData;
+        req.on('data', (chunks)=> {
+          console.log("chunks : ", chunks);
+          let datas = chunks.toString();
+          console.log("datas : ", datas);
+          console.log("type of datas :", typeof(datas)) //string
+          
+          //string to object
+          body = JSON.parse(datas);
+          console.log("body : ", body);
+          console.log("type of body :", typeof(body)) //object
+
+        
+        //   id = body.id;
+        //   console.log("id : ", id);
+        //   console.log("type (id) : ", typeof(id))
+
+        //   let _id = new ObjectId(id);
+        //   console.log("_id : ", _id);
+        //   console.log("type (_id) : ", typeof(_id));
+        
+            const updateData = {
+                $set: {
+                    mytext: datas.mytext,
+                    email: datas.email,
+                    pass: datas.pass
+                }
+            };
         });
     
         req.on('end', async () => {
-            let updateDatas = querystring.parse(body);
-            console.log("updateDatas : ",updateDatas);
-    
-            const updateQuery = { _id: updateDatas._id };
-            const updateData = {
-                $set: {
-                    mytext: updateDatas.mytext,
-                    email: updateDatas.email,
-                    pass: updateDatas.pass
-                }
-            };
-    
-            await collection.updateOne(updateQuery, updateData)
+            // let updateDatas = JSON.parse(body);
+            // console.log("updateDatas : ",updateDatas);
+            // let updateData;
+            await collection.updateOne(updateData)
                 .then((result) => {
                     if (result.modifiedCount > 0) {
                         console.log("Document updated successfully");
@@ -205,7 +214,7 @@ const server = http.createServer(async (req, res) => {
                     let response = {
                         success: false,
                         statusCode: 500,
-                        data: formDatas,
+                        data: updateData,
                         message: "Failed to update document"
                     };
     
@@ -239,8 +248,7 @@ if (req.method === "DELETE" && parsed_url.pathname === "/delete") {
         const deleteQuery = {_id : id};
         console.log("Id :", id);
 
-        await collection.deleteOne(deleteQuery
-            )
+        await collection.deleteOne(deleteQuery)
             .then((result) => {
                 if (result.deletedCount > 0) {
                     console.log("Document deleted successfully");
