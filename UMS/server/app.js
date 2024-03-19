@@ -36,11 +36,20 @@ const server = http.createServer(async (req, res) => {
     if (parsed_url.pathname === '/' && req.method === "GET") {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.end(fs.readFileSync('../client/index.html'));
-    } else if (parsed_url.pathname === '/sty.css' && req.method === "GET") {
+    } else if (parsed_url.pathname === '/style.css' && req.method === "GET") {
         res.writeHead(200, { 'Content-Type': 'text/css' });
-        res.end(fs.readFileSync('../client/sty.css'));
+        res.end(fs.readFileSync('../client/style.css'));
     } else if (parsed_url.pathname === '/script.js' && req.method === "GET") {
         res.writeHead(200, { 'Content-Type': 'text/javascript' });
+        res.end(fs.readFileSync('../client/script.js'));
+    }else if(parsed_url.pathname === '/addData.html' && req.method === "GET") {
+        res.writeHead(200, {'Content-Type' : 'text/html'});
+        res.end(fs.readFileSync('../client/addData.html'));
+    }else if(parsed_url.pathname === '/getData.html' && req.method === "GET") {
+        res.writeHead(200, {'Content-Type' : 'text/html'});
+        res.end(fs.readFileSync('../client/getData.html'));
+    }else if(parsed_url.pathname === '/script.js' && req.method === "GET") {
+        res.writeHead(200, {'Content-Type' : 'text/javascript'});
         res.end(fs.readFileSync('../client/script.js'));
     }
 
@@ -165,9 +174,9 @@ const server = http.createServer(async (req, res) => {
             console.log("type (_id) : ", typeof (_id));
 
             updateData = {
-                mytext: datas.mytext,
-                email: datas.email,
-                pass: datas.pass
+                mytext: body.mytext,
+                email: body.email,
+                pass: body.pass
             };
 
             console.log("updateData : ", updateData)
